@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\User\.Rider2019.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Nursoft.-1882759294.00" t="ExcludeRecursive" />
+    <e p="C:\Users\User\RiderProjects\Nursoft" t="IncludeFlat">
+      <e p="Nursoft" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="DAL" t="Include">
+          <e p="DataContext.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20200224105653_Initial Create.cs" t="Include" />
+          <e p="20200224105653_Initial Create.Designer.cs" t="Include" />
+          <e p="20200224114154_Repair Table.cs" t="Include" />
+          <e p="20200224114154_Repair Table.Designer.cs" t="Include" />
+          <e p="20200225063429_Features Table.cs" t="Include" />
+          <e p="20200225063429_Features Table.Designer.cs" t="Include" />
+          <e p="20200226083212_Services Table.cs" t="Include" />
+          <e p="20200226083212_Services Table.Designer.cs" t="Include" />
+          <e p="20200226103235_Testimonial Table.cs" t="Include" />
+          <e p="20200226103235_Testimonial Table.Designer.cs" t="Include" />
+          <e p="DataContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="ErrorViewModel.cs" t="Include" />
+          <e p="Feature.cs" t="Include" />
+          <e p="Repair.cs" t="Include" />
+          <e p="Service.cs" t="Include" />
+          <e p="Slider.cs" t="Include" />
+          <e p="Testimonial.cs" t="Include" />
+        </e>
+        <e p="Nursoft.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Nursoft.AssemblyInfo.cs" t="Include" />
+              <e p="Nursoft.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="HomeIndexViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="Privacy.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="animate.css" t="Include">
+            <e p="animate.min.css" t="Include" />
+          </e>
+          <e p="chosen" t="Include">
+            <e p="chosen-sprite.png" t="Include" />
+            <e p="chosen-sprite@2x.png" t="Include" />
+            <e p="chosen.jquery.min.js" t="Include" />
+            <e p="chosen.min.css" t="Include" />
+          </e>
+          <e p="css" t="Include">
+            <e p="pex-theme.min.css" t="Include" />
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="flexslider" t="Include">
+            <e p="jquery.flexslider-min.js" t="Include" />
+          </e>
+          <e p="fontawesome" t="Include">
+            <e p="css" t="Include">
+              <e p="all.min.css" t="Include" />
+            </e>
+            <e p="webfonts" t="Include">
+              <e p="fa-brands-400.eot" t="Include" />
+              <e p="fa-brands-400.svg" t="Include" />
+              <e p="fa-brands-400.ttf" t="Include" />
+              <e p="fa-brands-400.woff" t="Include" />
+              <e p="fa-brands-400.woff2" t="Include" />
+              <e p="fa-brands-400d41d.eot" t="Include" />
+              <e p="fa-regular-400.eot" t="Include" />
+              <e p="fa-regular-400.svg" t="Include" />
+              <e p="fa-regular-400.ttf" t="Include" />
+              <e p="fa-regular-400.woff" t="Include" />
+              <e p="fa-regular-400.woff2" t="Include" />
+              <e p="fa-regular-400d41d.eot" t="Include" />
+              <e p="fa-solid-900.eot" t="Include" />
+              <e p="fa-solid-900.svg" t="Include" />
+              <e p="fa-solid-900.ttf" t="Include" />
+              <e p="fa-solid-900.woff" t="Include" />
+              <e p="fa-solid-900.woff2" t="Include" />
+              <e p="fa-solid-900d41d.eot" t="Include" />
+            </e>
+          </e>
+          <e p="images" t="Include">
+            <e p="error" t="Include">
+              <e p="404-alt.png" t="Include" />
+              <e p="404.png" t="Include" />
+              <e p="under-construction.png" t="Include" />
+            </e>
+            <e p="icons" t="Include">
+              <e p="computer-blue.png" t="Include" />
+              <e p="computer-dark.png" t="Include" />
+              <e p="computer-sm.png" t="Include" />
+              <e p="computer-white.png" t="Include" />
+              <e p="mobile-blue.png" t="Include" />
+              <e p="mobile-dark.png" t="Include" />
+              <e p="mobile-sm.png" t="Include" />
+              <e p="mobile-white.png" t="Include" />
+              <e p="notebook-blue.png" t="Include" />
+              <e p="notebook-dark.png" t="Include" />
+              <e p="notebook-sm.png" t="Include" />
+              <e p="notebook-white.png" t="Include" />
+              <e p="paypal.jpg" t="Include" />
+              <e p="printer-blue.png" t="Include" />
+              <e p="printer-dark.png" t="Include" />
+              <e p="printer-sm.png" t="Include" />
+              <e p="printer-white.png" t="Include" />
+              <e p="side" t="Include">
+                <e p="email.png" t="Include" />
+                <e p="instagram.png" t="Include" />
+                <e p="phone.png" t="Include" />
+                <e p="phone1.png" t="Include" />
+                <e p="skype.png" t="Include" />
+              </e>
+            </e>
+            <e p="outsource" t="Include">
+              <e p="article-1.jpg" t="Include" />
+              <e p="article-2.jpg" t="Include" />
+              <e p="article-3.jpg" t="Include" />
+              <e p="article-inner-1.jpg" t="Include" />
+              <e p="article-inner-2.jpg" t="Include" />
+              <e p="member-1.jpg" t="Include" />
+              <e p="member-2.jpg" t="Include" />
+              <e p="member-3.jpg" t="Include" />
+              <e p="user-image.jpg" t="Include" />
+              <e p="user-small.jpg" t="Include" />
+            </e>
+            <e p="partners" t="Include">
+              <e p="altworks.png" t="Include" />
+              <e p="brothers.png" t="Include" />
+              <e p="endless.png" t="Include" />
+              <e p="finddata.png" t="Include" />
+              <e p="squarepc.png" t="Include" />
+              <e p="tranquil.png" t="Include" />
+              <e p="uberguard.png" t="Include" />
+            </e>
+            <e p="parts" t="Include">
+              <e p="feature-icon.png" t="Include" />
+              <e p="loader.gif" t="Include" />
+              <e p="pattern.png" t="Include" />
+            </e>
+            <e p="service" t="Include">
+              <e p="cpu-upgrade.jpg" t="Include" />
+              <e p="data-recovery.jpg" t="Include" />
+              <e p="game-console.jpg" t="Include" />
+              <e p="item-1.jpg" t="Include" />
+              <e p="item-2.jpg" t="Include" />
+              <e p="item-3.jpg" t="Include" />
+              <e p="item-4.jpg" t="Include" />
+              <e p="item-5.jpg" t="Include" />
+              <e p="item-6.jpg" t="Include" />
+              <e p="logo-alt.png" t="Include" />
+              <e p="logo.png" t="Include" />
+              <e p="measurements.jpg" t="Include" />
+              <e p="motherboard-1.jpg" t="Include" />
+              <e p="motherboard-3.jpg" t="Include" />
+              <e p="service.jpg" t="Include" />
+              <e p="serviceman-2.jpg" t="Include" />
+              <e p="serviceman.jpg" t="Include" />
+              <e p="touch-screen-replacement.jpg" t="Include" />
+            </e>
+            <e p="shop" t="Include">
+              <e p="126gb-ssd.jpg" t="Include" />
+              <e p="cable-organizer.jpg" t="Include" />
+              <e p="hdd.jpg" t="Include" />
+              <e p="laptop-ac-power-adapter.jpg" t="Include" />
+              <e p="mouse.jpg" t="Include" />
+              <e p="tablet.jpg" t="Include" />
+              <e p="usb-hub.jpg" t="Include" />
+              <e p="usb-hub1.jpg" t="Include" />
+              <e p="usb-hub2.jpg" t="Include" />
+              <e p="usb-hub3.jpg" t="Include" />
+              <e p="usb-hub4.jpg" t="Include" />
+              <e p="wifi-router.jpg" t="Include" />
+            </e>
+          </e>
+          <e p="jquery-ui-custom" t="Include">
+            <e p="jquery-ui.min.css" t="Include" />
+            <e p="jquery-ui.min.js" t="Include" />
+          </e>
+          <e p="js" t="Include">
+            <e p="jquery-1.12.4.min.js" t="Include" />
+            <e p="script.js" t="Include" />
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+          <e p="owlcarousel2" t="Include">
+            <e p="owl.carousel.min.js" t="Include" />
+          </e>
+          <e p="parallax.js" t="Include">
+            <e p="parallax.min.js" t="Include" />
+          </e>
+          <e p="pentix" t="Include">
+            <e p="css" t="Include">
+              <e p="pentix.min.css" t="Include" />
+            </e>
+            <e p="js" t="Include">
+              <e p="pentix.min.js" t="Include" />
+            </e>
+          </e>
+          <e p="shuffle" t="Include">
+            <e p="shuffle.min.js" t="Include" />
+          </e>
+          <e p="waypoints" t="Include">
+            <e p="jquery.waypoints.min.js" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Nursoft.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
