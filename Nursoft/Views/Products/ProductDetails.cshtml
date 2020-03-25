@@ -1,0 +1,55 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = @Model.Name;
+    Layout = "_Layout";
+}
+
+
+<section class="with-bg solid-section">
+    <div class="theme-back"></div>
+    <div class="container page-info">
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Products">Products</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li>@Model.Name</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="clearfix page-sidebar-right container">
+    <div class="page-content" style="padding-right:0">
+        <section class="content-section">
+            <div class="article">
+                <div class="cols-md offs-md" data-inview-showup="showup-translate-up">
+                    <div class="table">
+                        <div class="col col-middle">
+                            <h3 class="reset-offs text-upper">@Model.Name</h3>
+                        </div>
+                    </div>
+                </div>
+                <img class="col-6 offs-md" data-inview-showup="showup-translate-up" src="~/images/shop/@Model.Image" alt="@Model.Image">
+                <div class="col-12 content-text clearfix" data-inview-showup="showup-translate-up">
+                    <p>@Model.Description</p>
+                </div>
+                    
+                <div class="table offs-lg" data-inview-showup="showup-translate-up">
+                </div>
+            </div>
+            <div class="top-separator out-lg" data-inview-showup="showup-translate-up"></div>
+        </section>
+    </div>
+</div>

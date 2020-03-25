@@ -1,0 +1,76 @@
+﻿@model ProductViewModel
+
+@{
+    ViewBag.Title = Model.CategoryProduct.Name;
+    Layout = "_Layout";
+}
+
+<section class="with-bg solid-section">
+    <div class="theme-back"></div>
+    <div class="container page-info">
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Products">Products</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li>@Model.CategoryProduct.Name</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="clearfix page-sidebar-right container">
+    <div class="page-content">
+        <section class="content-section">
+            <div class="row cols-md rows-md partial">
+                @foreach (var product in Model.Products)
+                {
+                    if (product.CategoryProductId == Model.CategoryProduct.Id)
+                    {
+                        <div class="md-col-6">
+                            <div class="item shop-item shop-item-simple" data-inview-showup="showup-scale">
+                                <div class="item-back"></div>
+                                <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@product.Id" class="item-image responsive-1by1">
+                                    <img src="~/images/shop/@product.Image" alt="@product.Image">
+                                </a>
+                                <div class="item-content shift-md">
+                                    <div class="item-textes">
+                                        <div class="item-title text-upper">
+                                            <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@product.Id" class="content-link">@product.Name</a>
+                                        </div>
+                                        @Model.CategoryProduct.Name
+                                    </div>
+                                </div>
+                                <div class="item-links">
+                                    <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@product.Id" class="btn text-upper btn-md btns-bordered">view</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="pagination mt-5">
+                @* <Pagination page-count="@ViewBag.TotalPages" page-target="/products/index" page-number="@ViewBag.Page" page-range="@ViewBag.PageRange"></Pagination> *@
+            </div>
+        </section>
+    </div>
+</div>
+<a href="#" class="scroll-top disabled">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
+</a>
+<div class="loader-block">
+    <div class="loader-back alt-bg"></div>
+    <div class="loader-image">
+        <img class="image" src="~/images/parts/loader.gif" alt="">
+    </div>
+</div>

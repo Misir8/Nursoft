@@ -1,0 +1,113 @@
+﻿@model ProductViewModel
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Products";
+}
+@section styles
+{
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+}
+<section class="with-bg solid-section">
+    <div class="theme-back"></div>
+    <div class="container page-info">
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li><li>Shop</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="clearfix page-sidebar-right container">
+<div class="page-content">
+<section class="content-section">
+<form>
+    <div class="row">
+        <div class="sm-col-6 md-col-4">
+            <div class="field-group shop-line-field chosen-field">
+                <label>sort by</label>
+                <div class="field-wrap">
+                    <select class="field-control" id="sortBy">
+                        <option value="asc">Name Asc</option>
+                        <option value="desc">Name Desc</option>
+                    </select>
+                    <span class="select-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </span> <span class="field-back"></span>
+                </div>
+            </div>
+        </div>
+        <div class="sm-col-6 md-col-4">
+            <div class="field-group shop-line-field chosen-field">
+                <label>show</label>
+                <div class="field-wrap">
+                    <select class="field-control" name="show" selected="selected">
+                        <option name="show">4</option>
+                        <option name="show" value="1" selected="selected">8</option>
+                        <option name="show" value="2">10</option>
+                        <option name="show" value="3">20</option>
+                    </select>
+                    <span class="select-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </span> <span class="field-back"></span>
+                </div>
+            </div>
+        </div>
+        <div class="sm-col-12 md-col-4 md-text-right shop-results-text">Showing 9 to 16 of 20 total</div>
+    </div>
+</form>
+    <div class="row cols-md rows-md partial">
+        <partial model="@Model" name="_GetProductPartial"/>
+    </div>
+    <div class="pagination mt-5">
+            <Pagination page-count="@ViewBag.TotalPages" page-target="/products/index" page-number="@ViewBag.Page" page-range="@ViewBag.PageRange"></Pagination>
+    </div>
+</section>
+</div>
+    <aside class="page-sidebar content-section">
+        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+        <ul class="list-group">
+            @foreach (var cat in Model.CategoryProducts)
+            {
+                <li class="list-group-item"><a asp-route-id="@cat.Id" asp-action="CategoryDetails" asp-controller="Products">@cat.Name</a></li>
+            }
+        </ul>
+        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+
+
+
+    </aside>
+</div>
+<a href="#" class="scroll-top disabled">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
+</a>
+<div class="loader-block">
+    <div class="loader-back alt-bg"></div>
+    <div class="loader-image">
+        <img class="image" src="~/images/parts/loader.gif" alt="">
+    </div>
+</div>
+
+@section scripts
+{
+    <script >
+    $(document).on("change", "#sortBy", function (e) {
+                
+                var sortUrl = $(this).val();
+                $.ajax({
+                    url: "/Products/GetProduct/?query=" + sortUrl,
+                    type: "get",
+                    success: function (r) {
+                        document.querySelector(".partial").innerHTML = r;
+                    }
+                });
+            });
+    </script>
+}

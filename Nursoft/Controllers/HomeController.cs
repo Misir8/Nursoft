@@ -25,7 +25,7 @@ namespace Nursoft.Controllers
 
         public async Task<IActionResult> Index()
         {
-            HomeIndexViewModel vm = new HomeIndexViewModel
+            var vm = new HomeIndexViewModel
             {
                 Sliders = await _context.Sliders.ToListAsync(),
                 Repairs = await _context.Repairs.ToListAsync(),

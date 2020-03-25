@@ -1,0 +1,110 @@
+﻿@model AboutViewModel
+
+@{
+    ViewBag.Title = "About";
+    Layout = "_Layout";
+}
+
+
+
+<section class="with-bg solid-section">
+    <div class="theme-back"></div>
+    <div class="container page-info">
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li><li>Pages</li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li><li>About Us</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="muted-bg solid-section" data-inview-showup="showup-translate-up">
+    <div class="container">
+        <div class="row cols-xl rows-lg">
+            @foreach (var about in Model.Abouts)
+            {
+                <div class="md-col-6 text-center md-text-left">
+                    <h2 class="text-upper text-semibold">What we do</h2>
+                    <p>@about.Description</p>
+                </div>
+                <div class="md-col-6 md-fix-container">
+                    <img class="image" src="images/service/@about.Image" alt="@about.Image">
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="content-section" data-inview-showup="showup-translate-up">
+    <div class="container">
+        <div class="row cols-md rows-xl">
+            <div class="md-col-3 text-center md-text-left">
+                <h3 class="text-upper text-semibold">Our team</h3>
+                <p>Meet with our qualified and expert team. We are specialized in our individual field. We have enough skill and tested. That’s why you’re getting the quality repair services.</p>
+                <div class="shift-lg">
+                    <a class="btn text-upper" href="contact-us.html">Contact us</a>
+                </div>
+            </div>
+            @foreach (var team in Model.Teams)
+            {
+                <div class="md-col-3 sm-col-4">
+                    <div class="member sm-fix-container">
+                        <div class="text-center">
+                            <span class="image-wrap">
+                                <img class="image" src="images/outsource/@team.Image" alt="@team.Image">
+                            </span>
+                        </div>
+                        <div class="member-info muted-bg text-center">
+                            <div class="member-title">@team.Name</div>
+                            <div class="member-subtitle">@team.Position</div>
+                            <div class="cols-list cols-sm socials inline-block">
+                                <a href="#" class="list-item">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="list-item">
+                                    <i class="fab fa-google-plus-g" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="main-bg" data-inview-showup="showup-translate-up">
+    <div class="container">
+        <div class="contact-table only-xs-text-center">
+            <div class="contact-icon xs-hidden">
+                <i class="fas fa-bicycle" aria-hidden="true"></i>
+            </div>
+            <div class="contact-content">
+                <div class="contact-title">Request free consultation</div>
+                <div class="text-justify only-xs-text-justify-center">Get answers and advice from people you want it from.</div>
+            </div>
+            <div class="contact-btn">
+                <a href="contact-us.html" class="btn btns-white text-upper">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="#" class="scroll-top disabled">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
+</a>
+<div class="loader-block">
+    <div class="loader-back alt-bg"></div>
+    <div class="loader-image">
+        <img class="image" src="images/parts/loader.gif" alt="">
+    </div>
+</div>
