@@ -3,6 +3,17 @@
     ViewData["Title"] = "Home Page";
     Layout = "_Layout";
 }
+@section styles
+{
+    <style>
+        div .item-text {
+           white-space: pre-wrap;
+           overflow: hidden;
+           padding: 5px;
+           text-overflow: ellipsis;
+        }
+    </style>
+}
 <section>
     <div class="flexslider screen-height">
         <div class="slides">
@@ -35,30 +46,6 @@
     </div>
 </section>
 <div class="clearfix muted-bg">
-    <section class="md-stuck-top content-section">
-        <div class="container hyped-block">
-            <div class="row cols-md rows-md">
-                <div class="md-col-12">
-                    <div class="row cols-md rows-md">
-                       @foreach (var repair in Model.Repairs)
-                       {
-                           <div class="md-col-3">
-                               <div class="price-block simple" data-inview-showup="showup-translate-up">
-                                   <div class="price-back"></div>
-                                   <div class="price-image">
-                                       <img class="image" src="images/icons/@repair.Image" alt="">
-                                   </div>
-                                   <div class="price-title">@repair.Name</div>
-                                   <div class="price-subtext">@repair.Description</div>
-                                   <a class="btn-md btns-bordered btn text-upper" href="#">read more</a>
-                               </div>
-                           </div>
-                       }
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="content-section">
         <div class="container">
             <div class="section-head text-center container-md">
@@ -97,7 +84,7 @@
             {
                 <div class="md-col-4 sm-col-6">
                     <div class="item" data-inview-showup="showup-translate-up">
-                        <a href="service.html" class="block-link text-center">
+                        <a asp-action="Service" asp-route-id="@service.Id" asp-controller="Services" class="block-link text-center">
                             <span class="image-wrap">
                                 <img class="image" src="images/service/@service.Image" alt="">
                             </span>
@@ -112,17 +99,20 @@
                         </a>
                         <div class="item-content">
                             <div class="item-title text-upper">
-                                <a href="service.html">@Html.Raw(service.Name)</a>
+                                <a  asp-action="Service" asp-route-id="@service.Id" asp-controller="Services">@Html.Raw(service.Name)</a>
                             </div>
                             <div class="item-text">@Html.Raw(service.Description)</div>
-                            <a href="service.html" class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                            <a asp-action="Service" asp-route-id="@service.Id" asp-controller="Services" class="btn btn-md btns-bordered pull-right text-upper">read more</a>
                         </div>
                     </div>
                 </div>
             }
         </div>
         <div class="text-center shift-xl">
-            <a class="btn text-upper" href="services.html" data-inview-showup="showup-translate-up"><i class="fas fa-th-large" aria-hidden="true"></i>&nbsp;&nbsp;view all services</a>
+            <a class="btn text-upper" asp-action="Index" asp-controller="Services" data-inview-showup="showup-translate-up">
+                <i class="fas fa-th-large" aria-hidden="true"></i>&nbsp;
+                &nbsp;view all services
+            </a>
         </div>
     </div>
 </section>

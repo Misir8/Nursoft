@@ -10,7 +10,6 @@ namespace Nursoft.DAL
         }
 
         public DbSet<Slider> Sliders { get; set; }
-        public DbSet<Repair> Repairs { get; set; }
         public DbSet<Feature> Features { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
@@ -49,36 +48,7 @@ namespace Nursoft.DAL
                 }
             );
 
-            modelBuilder.Entity<Repair>().HasData(
-                new Repair
-                {
-                    Id = 1,
-                    Name = "Laptop Repair",
-                    Description = "starting at...",
-                    Image = "notebook-dark.png"
-                },
-                new Repair
-                {
-                    Id = 2,
-                    Name = "Computer Repair",
-                    Description = "starting at...",
-                    Image = "computer-dark.png"
-                },
-                new Repair
-                {
-                    Id = 3,
-                    Name = "Printer Repair",
-                    Description = "starting at...",
-                    Image = "printer-dark.png"
-                },
-                new Repair
-                {
-                    Id = 4,
-                    Name = "Smartphone Repair",
-                    Description = "starting at...",
-                    Image = "mobile-dark.png"
-                }
-            );
+            
             modelBuilder.Entity<Feature>().HasData(
                 new Feature{Id = 1, Name = "WE ARE FAST", Description = "Qualified Workers Lorem Ipsum is simply dummy text of the printi"},
                 new Feature{Id = 2, Name = "NO FIX, NO FEE", Description = "Repair on Demand Lorem Ipsum is simply dummy text of the printing"},

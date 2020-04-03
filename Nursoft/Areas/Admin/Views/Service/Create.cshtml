@@ -1,0 +1,69 @@
+﻿@model Service
+
+@{
+    ViewBag.Title = "Yeni xidmət";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Yeni xidmət
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="Create" asp-controller="Service" enctype="multipart/form-data">
+        <!-- Default box -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Yeni xidmətin əlavə edilməsi</h3>
+                </div>
+                
+                <div style="color: red" asp-validation-summary="All"></div>
+                <div class="box-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" type="text" class="form-control"  placeholder="">
+                            <span  asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description"></label>
+                            <textarea name="Description" required asp-for="Description" type="text" class="form-control"  placeholder=""></textarea>
+                            <span asp-validation-for="Description"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Photo"></label>
+                            <input type="file" required asp-for="Photo">
+                            <span asp-validation-for="Image"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <a asp-controller="Service" asp-action="Index" class="btn btn-default">Geriyə qayıt</a>
+                    <input type="submit" class="btn btn-success pull-right" value="Əlavə et">
+                </div>
+                <!-- /.box-footer-->
+            </div>
+            <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->
+
+
+@section script
+{
+    <partial name="_ValidationPartial"/>
+    <script src="~/ckeditor/ckeditor.js"></script>
+     <script>
+                CKEDITOR.replace( 'Description', {
+                    language: "az"
+                } );
+    </script>
+    
+}

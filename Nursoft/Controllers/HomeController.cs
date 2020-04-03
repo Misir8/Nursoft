@@ -28,7 +28,6 @@ namespace Nursoft.Controllers
             var vm = new HomeIndexViewModel
             {
                 Sliders = await _context.Sliders.ToListAsync(),
-                Repairs = await _context.Repairs.ToListAsync(),
                 Features = await _context.Features.ToListAsync(),
                 Services = await _context.Services.Take(6).ToListAsync(),
                 Testimonials = await _context.Testimonials.ToListAsync()

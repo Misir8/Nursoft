@@ -1,0 +1,51 @@
+﻿@model CategoryProduct
+
+@{
+    ViewBag.Title = "Yeni məhsul kateqoriyası";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Yeni məhsul kateqoriyası
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="Create" asp-controller="ProductCategory" enctype="multipart/form-data">
+        <!-- Default box -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Yeni məhsul kateqoriyasının əlavə edilməsi</h3>
+                </div>
+                
+                <div style="color: red" asp-validation-summary="All"></div>
+                <div class="box-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" type="text" class="form-control"  placeholder="">
+                            <span style="color: red"  asp-validation-for="Name"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <a asp-controller="ProductCategory" asp-action="Index" class="btn btn-default">Geriyə qayıt</a>
+                    <input type="submit" class="btn btn-success pull-right" value="Əlavə et">
+                </div>
+                <!-- /.box-footer-->
+            </div>
+            <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->
+
+@section script
+{
+    <partial name="_ValidationPartial"/>
+}

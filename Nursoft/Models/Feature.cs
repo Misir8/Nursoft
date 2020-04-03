@@ -1,13 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Nursoft.Models
 {
     public class Feature
     {
         public int Id { get; set; }
-        [Required, StringLength(50)]
+        [DisplayName("Ad")]
+        [Required(ErrorMessage = "Ad mütləq doldurlmalıdır"), StringLength(50,ErrorMessage = "Üstündlüyün adı maksimum 50 simvoladan ibarət ola bilər")]
         public string Name { get; set; }
-        [Required, StringLength(500)]
+        [DisplayName("Mətn")]
+        [Required(ErrorMessage = "Mətn mütləq doldurlmalıdır"), StringLength(500, ErrorMessage = "Üstündlüyün mətni maksimum 50 simvoladan ibarət ola bilər")]
         public string Description { get; set; }
     }
 }

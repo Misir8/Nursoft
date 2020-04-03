@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Service>
+
+@{
+    ViewBag.Title = "Xidmətlər";
+    Layout = "_Layout";
+}
+@section styles
+{
+    
+}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Xidmətlər
+      </h1>
+      <ol class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a></li>
+        <li class="active">Xidmətlər</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <partial name="_SuccessMessagePartial"/>
+              <partial name="_DangerMessagePartial"/>
+              <partial name="_WarningMessagePartial"/>
+              <div class="form-group">
+                <a asp-controller="Service" asp-action="Create" class="btn btn-success">Yeni xidmət əlavə et</a>
+              </div>
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Başlıq</th>
+                  <th>Mətn</th>
+                  <th>Şəkil</th>
+                  <th>Hərəkətlər</th>
+                  <th style="display: none"></th>
+                  <th style="display: none"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var service in Model)
+                {
+                  <tr>
+                    <td>@Html.Raw(service.Name)</td>
+                    <td >@Html.Raw(service.Description)</td>
+                    <td>
+                      <img src="~/images/service/@service.Image" alt="@service.Image" width="100">
+                    </td>
+                    <td>
+                      <a asp-action="Edit" asp-controller="Service" asp-route-id="@service.Id" class="fa fa-pencil"></a>
+                      <a asp-action="Delete" asp-controller="Service" asp-route-id="@service.Id" class="fa fa-remove"></a>
+                    </td>
+                    <td style="display: none"></td>
+                    <td style="display: none"></td>
+                  </tr>
+                }
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      <!-- /.box -->
+
+    </section>
+<!-- /.content -->

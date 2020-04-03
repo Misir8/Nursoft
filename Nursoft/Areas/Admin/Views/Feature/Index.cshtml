@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Feature>
+
+@{
+    ViewBag.Title = "Üstünlüklər";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Üstünlüklər
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a>
+        </li>
+        <li class="active">Üstünlüklər</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+        
+        <!-- /.box-header -->
+        <div class="box-body">
+            <partial name="_WarningMessagePartial"/>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Başlıq</th>
+                    <th>Mətn</th>
+                    <th>Hərəkətlər</th>
+                    <th style="display: none"></th>
+                    <th style="display: none"></th>
+                    <th style="display: none"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var feature in Model)
+                {
+                    <tr>
+                        <td>@feature.Name</td>
+                        <td>@feature.Description</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="Feature" asp-route-id="@feature.Id" class="fa fa-pencil"></a>
+                        </td>
+
+                        <td style="display: none"></td>
+                        <td style="display: none"></td>
+                        <td style="display: none"></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</section>
+<!-- /.content -->

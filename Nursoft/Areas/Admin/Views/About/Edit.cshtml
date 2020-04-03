@@ -1,0 +1,61 @@
+﻿@model About
+
+@{
+    ViewBag.Title = "Haqqında məlumatı dəyiş";
+    Layout = "_Layout";
+}
+
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Haqqında məlumatı dəyişmək
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form  asp-action="Edit" asp-controller="About" method="post" enctype="multipart/form-data" >
+        <!-- Default box -->
+        <div class="box">
+            <div asp-validation-summary="All"></div>
+            <div class="box-body">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label asp-for="Photo"></label>
+                        <input type="file" class="form-control" asp-for="Photo" name="Photo" accept="image/gif, image/jpeg, image/jpeg, image/png"/>
+                        <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>İndiki Şəkil</label>
+                        <img src="~/images/service/@Model.Image" alt="@Model.Image" width="100"/>
+                        <input type="hidden" name="Image" value="@Model.Image"/>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description"></label>
+                        <textarea  type="text" class="form-control" asp-for="Description" placeholder=""></textarea >
+                        <span asp-validation-for="Description"></span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a asp-action="Index" asp-controller="About" class="btn btn-default">Geriyə qayıt</a>
+                <button type="submit" class="btn btn-warning pull-right edit">Dəyiş</button>
+            </div>
+            <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->
+
+@section script
+{
+    <partial name="_ValidationPartial"/>
+}

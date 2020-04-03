@@ -1,0 +1,59 @@
+﻿@model ContactUs
+
+@{
+    ViewBag.Title = "Əlaqə məlumatların dəyişdirilməsi";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Əlaqə məlumatların dəyişmək
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="Edit" asp-controller="ContactUs" method="post" enctype="multipart/form-data">
+        <!-- Default box -->
+        <div class="box">
+            <div asp-validation-summary="All" style="color: red;"></div>
+            <div class="box-body">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input type="text" class="form-control" asp-for="Email" placeholder="">
+                        <span asp-validation-for="Email" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address"></label>
+                        <input type="text" class="form-control" asp-for="Address" placeholder="">
+                        <span asp-validation-for="Address" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone"></label>
+                        <input type="text" class="form-control" asp-for="Phone" placeholder="">
+                        <span asp-validation-for="Phone" style="color: red"></span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a asp-action="Index" asp-controller="ContactUs" class="btn btn-default">Geriyə qayıt</a>
+                <button type="submit" class="btn btn-warning pull-right">Dəyiş</button>
+            </div>
+            <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->
+
+@section script
+{
+    <partial name="_ValidationPartial"/>
+}

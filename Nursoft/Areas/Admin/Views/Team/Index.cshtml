@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Team>
+
+@{
+    ViewBag.Title = "İşçilər";
+    Layout = "_Layout";
+}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        İşçilər
+      </h1>
+      <ol class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a></li>
+        <li class="active">İşçilər</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <partial name="_SuccessMessagePartial"/>
+              <partial name="_DangerMessagePartial"/>
+              <partial name="_WarningMessagePartial"/>
+              <div class="form-group">
+                <a asp-controller="Team" asp-action="Create" class="btn btn-success">Yeni işçi əlavə et</a>
+              </div>
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Ad</th>
+                  <th>Mövqe</th>
+                  <th>Şəkil</th>
+                  <th>Hərəkətlər</th>
+                  <th style="display: none"></th>
+                  <th style="display: none"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var team in Model)
+                {
+                  <tr>
+                    <td>@team.Name</td>
+                    <td >@team.Position</td>
+                    <td>
+                      <img src="~/images/outsource/@team.Image" alt="@team.Image" width="100">
+                    </td>
+                    <td>
+                      <a asp-action="Edit" asp-controller="Team" asp-route-id="@team.Id" class="fa fa-pencil"></a>
+                      <a asp-action="Delete" asp-controller="Team" asp-route-id="@team.Id" class="fa fa-remove"></a>
+                    </td>
+                    <td style="display: none"></td>
+                    <td style="display: none"></td>
+                  </tr>
+                }
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      <!-- /.box -->
+
+    </section>
+<!-- /.content -->

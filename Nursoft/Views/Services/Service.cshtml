@@ -14,13 +14,13 @@
         <div class="container" data-inview-showup="showup-translate-down">
             <ul class="page-path">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </li>
                 <li>
-                    <a href="services.html">Services</a>
+                    <a asp-action="Index" asp-controller="Services">Services</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
                 <h3 class="text-upper offs-md" data-inview-showup="showup-translate-up">@Html.Raw(Model.Service.Name)</h3>
                 <img data-inview-showup="showup-translate-up" class="col-12 offs-md" src="~/images/service/@Model.Service.Image" alt="@Model.Service.Image">
                 <div class="content-text clearfix" data-inview-showup="showup-translate-up">
-                 @Model.Service.Description
+                 @Html.Raw(Model.Service.Description)
                 </div>
                 <div class="top-separator out-lg" data-inview-showup="showup-translate-up"></div>
                 <div class="table offs-lg" data-inview-showup="showup-translate-up">

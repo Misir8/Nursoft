@@ -2,70 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2e0c6de-44ad-4fe5-9d22-83bdde507113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Nursoft/Controllers/AboutController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Controllers/ContactController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Controllers/ServicesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Extensions/PaginationTagHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/About.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/CategoryProduct.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/Contact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/ContactUs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/MapContact.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Models/Team.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/ViewComponent/AddressViewComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/ViewComponent/EmailViewComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/ViewComponent/PhoneViewComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/ViewModels/AboutViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/ViewModels/ProductViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/ViewModels/ServiceViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Contact/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/News/Details.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductPartial.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/AboutController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ContactUsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/FeatureController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/HomeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ProductCategoryController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ServiceController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/SliderController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/TeamController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Feature/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Feature/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Home/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_DangerMessagePartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_SuccessMessagePartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_ValidationPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_WarningMessagePartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Extensions/IFormFileExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/DAL/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/DAL/DataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Models/Feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Models/Feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Models/Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Models/Service.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Models/Slider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Models/Slider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Models/Team.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Models/Team.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Nursoft.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Nursoft.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/_ViewImports.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.TagHelpers.output.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/CategoryDetails.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/CategoryDetails.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Services/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Services/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Services/Service.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Services/Service.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/wwwroot/images/service/measurements.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,109 +88,154 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Nursoft/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB9CEB1E-F6C3-448D-8D4A-C9F8963779FB/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB9CEB1E-F6C3-448D-8D4A-C9F8963779FB/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/DAL/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ProductCategoryController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ServiceController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Slider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_DangerMessagePartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Service.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/TeamController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_WarningMessagePartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Feature/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_SuccessMessagePartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/SliderController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ContactUsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/ViewModels/ServiceViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_ValidationPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/AboutController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Feature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/FeatureController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Feature/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Extensions/PaginationTagHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Team.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Models/MapContact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB9CEB1E-F6C3-448D-8D4A-C9F8963779FB/262/AsyncValueTaskMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/ServicesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/ViewModels/AboutViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/AboutController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Models/About.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/ViewComponent/PhoneViewComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Models/Contact.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/ViewComponent/EmailViewComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Models/Product.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB9CEB1E-F6C3-448D-8D4A-C9F8963779FB/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/ViewComponent/AddressViewComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB9CEB1E-F6C3-448D-8D4A-C9F8963779FB/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Models/CategoryProduct.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/Contact/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/DAL/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/ContactController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/News/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Slider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/NewsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Service.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Models/ContactUs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/News/Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/ViewModels/ServiceViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Feature.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Extensions/PaginationTagHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Models/Team.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Models/MapContact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/18E1594A-9B50-45D0-899C-1EF7114FC7E0/20/ValidationSummaryTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Models/Testimonial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/_GetProductPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB9CEB1E-F6C3-448D-8D4A-C9F8963779FB/262/AsyncValueTaskMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/ServicesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/ViewModels/ProductViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Extensions/IFormFileExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/ViewModels/AboutViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Models/Repair.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Controllers/AboutController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/ViewModels/HomeIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Nursoft/Models/About.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Nursoft/Models/Slider.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Repository/SliderRepository.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Repository/IRepository.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/appsettings.json" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewModels/IndexViewModel.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Repair.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Views/_ViewImports.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Views/_ViewStart.cshtml" />
         <option value="$PROJECT_DIR$/Nursoft/Startup.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Feature.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Service.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Testimonial.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/ContactUs.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewModels/HomeIndexViewModel.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewComponent/AddressViewComponent.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewComponent/EmailViewComponent.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewComponent/PhoneViewComponent.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/About.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Pages/About/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Team.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewModels/AboutViewModel.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Controllers/AboutController.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Pages/Services/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewModels/ServiceViewModel.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Controllers/ServicesController.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Extensions/Pagination.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/_ViewImports.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Extensions/PaginationTagHelper.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/News/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/News/Details.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Pages/Contact/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/wwwroot/images/icons/marker.svg" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Contact.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/MapContact.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Controllers/ContactController.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Contact/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/Product.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Models/CategoryProduct.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Home/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/_ViewImports.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Models/Slider.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Extensions/IFormFileExtension.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Edit.cshtml" />
         <option value="$PROJECT_DIR$/Nursoft/DAL/DataContext.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Controllers/NewsController.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/ViewModels/ProductViewModel.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductPartial.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_ValidationPartial.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Models/Feature.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_SuccessMessagePartial.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/SliderController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_WarningMessagePartial.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_DangerMessagePartial.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/FeatureController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Create.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/Services/Service.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Slider/Delete.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Delete.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/Services/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Models/Service.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Create.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Feature/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ContactUsController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Feature/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/AboutController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ServiceController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Create.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Delete.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/TeamController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Team/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Models/Team.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Index.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Create.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Delete.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ProductCategoryController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ProductCategory/Edit.cshtml" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1YF90E9viwpuPjBf0ji5lTYfuBx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -188,7 +245,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Nursoft">
     <configuration name="Nursoft" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -269,6 +326,21 @@
       <workItem from="1585052126786" duration="4743000" />
       <workItem from="1585122470574" duration="4557000" />
       <workItem from="1585150781491" duration="3398000" />
+      <workItem from="1585210698444" duration="2612000" />
+      <workItem from="1585231547512" duration="9082000" />
+      <workItem from="1585250988339" duration="2946000" />
+      <workItem from="1585281462025" duration="3559000" />
+      <workItem from="1585290295150" duration="142000" />
+      <workItem from="1585384037406" duration="1409000" />
+      <workItem from="1585386040732" duration="1513000" />
+      <workItem from="1585481442412" duration="2749000" />
+      <workItem from="1585490453193" duration="193000" />
+      <workItem from="1585556002961" duration="5695000" />
+      <workItem from="1585563213292" duration="3740000" />
+      <workItem from="1585650460216" duration="4237000" />
+      <workItem from="1585740681970" duration="4563000" />
+      <workItem from="1585818381183" duration="2622000" />
+      <workItem from="1585908186025" duration="2538000" />
     </task>
     <servers />
   </component>
@@ -301,98 +373,102 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="413" height="466" key="DebuggerActiveHint" timestamp="1584965429901">
+    <state x="691" y="183" width="700" height="673" key="#Nursoft" timestamp="1585251233010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="413" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1584965429901" />
-    <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1585154248387">
+    <state x="691" y="183" width="700" height="673" key="#Nursoft/0.0.1920.1040@0.0.1920.1040" timestamp="1585251233010" />
+    <state width="433" height="466" key="DebuggerActiveHint" timestamp="1585237855189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585154248387" />
-    <state width="1877" height="278" key="GridCell.Tab.0.center" timestamp="1585154248386">
+    <state width="433" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1585237855189" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1585910755002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585154248386" />
-    <state width="1877" height="278" key="GridCell.Tab.0.left" timestamp="1585154248386">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585910755002" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1585910755002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585154248386" />
-    <state width="1877" height="278" key="GridCell.Tab.0.right" timestamp="1585154248386">
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585910755002" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1585910755002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585154248386" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1585057247888">
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585910755002" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1585910755002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1585057247887">
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585910755002" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247887" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1585057247887">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247887" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1585057247887">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247887" />
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.3.bottom" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.3.center" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.3.bottom" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.3.left" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.3.center" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.3.right" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.3.left" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.4.bottom" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.3.right" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.4.center" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.4.bottom" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.4.left" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.4.center" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
-    <state width="1877" height="347" key="GridCell.Tab.4.right" timestamp="1585057247888">
+    <state width="1877" height="347" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.4.left" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585057247888" />
+    <state width="1877" height="347" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
+    <state width="1877" height="347" key="GridCell.Tab.4.right" timestamp="1585240688971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585240688971" />
     <state x="794" y="221" key="RiderGenerateDialog" timestamp="1582533399623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582533399623" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1585151341479">
+    <state x="461" y="163" key="SettingsEditor" timestamp="1585211497937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585151341479" />
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585211497937" />
     <state x="490" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582874929805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

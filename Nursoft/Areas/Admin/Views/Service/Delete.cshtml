@@ -1,0 +1,44 @@
+﻿@model Service
+
+@{
+    ViewBag.Title = "Xidməti sil";
+    Layout = "_Layout";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Xidməti sil
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <form asp-action="Delete" asp-controller="Service">
+    <!-- Default box -->
+      <div class="box">
+          <div class="box-header with-border">
+              <h3 class="box-title">Xidməti silməyi əminsiniz?</h3>
+          </div>
+          <div class="box-body">
+              <div class="col-md-6">
+                  <div>
+                      <img src="~/images/service/@Model.Image" style="width: 100px" alt="@Model.Image">
+                      <h3>@Html.Raw(Model.Name)</h3>
+                      <h3>@Html.Raw(Model.Description)</h3>
+                  </div>
+              </div>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+              <a asp-action="Index" asp-controller="Service" class="btn btn-default">Geriyə qayıt</a>
+              <button type="submit"  class="btn btn-warning pull-right">Sil</button>
+
+          </div>
+          <!-- /.box-footer-->
+      </div>
+      <!-- /.box -->
+</form>
+
+</section>
+<!-- /.content -->
