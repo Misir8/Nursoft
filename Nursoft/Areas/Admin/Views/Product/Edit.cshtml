@@ -1,0 +1,84 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = "Məhsulu dəyişmək";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Məhsulu dəyişmək
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="Edit" asp-controller="Product" method="post" enctype="multipart/form-data">
+        <!-- Default box -->
+        <div class="box">
+            <div asp-validation-summary="All" style="color: red"></div>
+            <div class="box-body">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input type="text" class="form-control" asp-for="Name" placeholder="">
+                        <span style="color: red" asp-validation-for="Name"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="CategoryProductId">Kateqoriya</label>
+                        <select class="form-control" asp-for="CategoryProductId" asp-items="ViewBag.Categories as SelectList">
+                        </select>
+                        <span asp-validation-for="CategoryProductId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Photo"></label>
+                        <input type="file" class="form-control" asp-for="Photo" name="Photo" accept="image/jpeg, image/jpg, image/png, image/gif"/>
+                        <span style="color: red" asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>İndiki Şəkil</label>
+                        <img src="~/images/shop/@Model.Image" alt="@Model.Image"/>
+                        <input type="hidden" name="Image" value="@Model.Image"/>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description"></label>
+                        <textarea  type="text" class="form-control" asp-for="Description" placeholder=""></textarea >
+                        <span style="color: red" asp-validation-for="Description"></span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a asp-action="Index" asp-controller="Product" class="btn btn-default">Geriyə qayıt</a>
+                <button type="submit" class="btn btn-warning pull-right edit">Dəyiş</button>
+            </div>
+            <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->
+
+@section script
+{
+    <partial name="_ValidationPartial"/>
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script>
+
+    CKEDITOR.replace( 'Description', {
+    language: "az"
+    } );
+   
+    
+     
+    </script>
+
+
+}

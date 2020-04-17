@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Nursoft.Models;
 
 namespace Nursoft.DAL
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<User>
     {
         public DataContext(DbContextOptions<DataContext> options): base(options)
         {
@@ -11,7 +12,7 @@ namespace Nursoft.DAL
 
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Feature> Features { get; set; }
-        public DbSet<Service> Services { get; set; }
+        public DbSet<Models.Service> Services { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<ContactUs> ContactUses { get; set; }
         public DbSet<About> Abouts { get; set; }
@@ -56,43 +57,43 @@ namespace Nursoft.DAL
                 new Feature{Id = 4, Name = "EXPERT STAFF", Description = "Available Anytime Lorem Ipsum is simply dummy text of the printing"}
             );
 
-            modelBuilder.Entity<Service>().HasData(
-                new Service
+            modelBuilder.Entity<Models.Service>().HasData(
+                new Models.Service
                 {
                     Id = 1,
                     Name = "Data backup &amp; recovery",
                     Description = "We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff",
                     Image = "item-1.jpg"
                 },
-                new Service
+                new Models.Service
                 {
                     Id = 2,
                     Name = "Laptop &amp; Mac Upgrade",
                     Description = "We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff",
                     Image = "item-2.jpg"
                 },
-                new Service
+                new Models.Service
                 {
                     Id = 3,
                     Name = "Data backup &amp; recovery",
                     Description = "We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff",
                     Image = "item-3.jpg"
                 },
-                new Service
+                new Models.Service
                 {
                     Id = 4,
                     Name = "Data backup &amp; recovery",
                     Description = "We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff",
                     Image = "item-4.jpg"
                 },
-                new Service
+                new Models.Service
                 {
                     Id = 5,
                     Name = "Data backup &amp; recovery",
                     Description = "We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff",
                     Image = "item-5.jpg"
                 },
-                new Service
+                new Models.Service
                 {
                     Id = 6,
                     Name = "Data backup &amp; recovery",

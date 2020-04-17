@@ -1,0 +1,108 @@
+﻿@model RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "_Layout";
+}
+
+
+<section class="with-bg solid-section">
+    <div class="theme-back"></div>
+    <div class="container page-info">
+        <div class="section-alt-head container-md">
+        </div>
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li>
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li>Sign In</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="content-section">
+    <div class="container">
+        <div class="section-head text-center container-md">
+            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Sign in</h2>
+            <p data-inview-showup="showup-translate-left">Sign in to your account to discover all great features in this template.</p>
+        </div>
+        <form class="sign-in-form" method="post" asp-controller="Account" asp-action="Register">
+            <div class="medium-container">
+                <div class="row rows-lg cols-lg rows-lg">
+                    <div class="sm-col-12">
+                        <div asp-validation-summary="All" style="color: red"></div> <br>
+                        <div class="item-form" data-inview-showup="showup-translate-right">
+                            <div class="offs-lg">
+                                <div class="field-group">
+                                    <div class="field-wrap">
+                                        <input class="field-control" asp-for="Email" placeholder="Your Login or email" required="required"> <span class="field-back"></span>
+                                    </div>
+                                </div>
+                                <div class="field-group">
+                                    <div class="field-wrap">
+                                        <input class="field-control" asp-for="Password" type="password" placeholder="Password" required="required"> <span class="field-back"></span>
+                                    </div>
+                                </div>
+                                <div class="field-group">
+                                    <div class="field-wrap">
+                                        <input class="field-control" asp-for="PasswordConfirm" type="password" placeholder="Password" required="required"> <span class="field-back"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <button class="btn text-upper" type="submit">Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<a href="#" class="scroll-top disabled">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
+</a>
+<div class="singlepage-block collapse alt-bg" data-block="search" data-show-block-class="animation-scale-top-right" data-hide-block-class="animation-unscale-top-right">
+    <a href="#" class="close-link" data-close-block>
+        <i class="fas fa-times" aria-hidden="true"></i>
+    </a>
+    <div class="pos-v-center col-12">
+        <div class="container">
+            <div class="row cols-md rows-md">
+                <div class="lg-col-9 md-col-8 sm-col-12">
+                    <div class="field-group">
+                        <div class="field-wrap">
+                            <input class="field-control" name="search" placeholder="Search Tags" required="required"> <span class="field-back"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg-col-3 md-col-4 sm-col-6">
+                    <button class="btn btns-white-bordered text-upper" type="submit">search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="loader-block">
+    <div class="loader-back alt-bg"></div>
+    <div class="loader-image">
+        <img class="image" src="~/images/parts/loader.gif" alt="">
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"
+        asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+        asp-fallback-test="window.jQuery && window.jQuery.validator">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.10/jquery.validate.unobtrusive.min.js"
+        asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+        asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
+    </script>
+}

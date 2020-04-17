@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Nursoft.DAL;
+using Nursoft.Models;
 
 namespace Nursoft
 {
@@ -28,6 +26,17 @@ namespace Nursoft
             string connection = Configuration.GetConnectionString("Default");
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(connection));
+            
+            services.AddIdentity<User, IdentityRole>(opts =>
+                {
+                    opts.User.RequireUniqueEmail = true;
+                    opts.Password.RequiredLength = 7; 
+                    opts.Password.RequireNonAlphanumeric = false;
+                    opts.Password.RequireLowercase = false;
+                    opts.Password.RequireUppercase = false;
+                })
+                .AddEntityFrameworkStores<DataContext>()
+                .AddDefaultTokenProviders();
             services.AddControllersWithViews();
         }
 
@@ -49,9 +58,8 @@ namespace Nursoft
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

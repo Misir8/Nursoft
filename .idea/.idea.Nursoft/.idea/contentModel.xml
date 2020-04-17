@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\User\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\User\.Rider2019.3\config\Extensions" t="IncludeRecursive" />
-    <e p="C:\Users\User\.Rider2019.3\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Nursoft.-1882759294.00" t="ExcludeRecursive" />
     <e p="C:\Users\User\RiderProjects\Nursoft" t="IncludeFlat">
@@ -14,10 +11,14 @@
           <e p="Admin" t="Include">
             <e p="Controllers" t="Include">
               <e p="AboutController.cs" t="Include" />
+              <e p="ContactController.cs" t="Include" />
               <e p="ContactUsController.cs" t="Include" />
               <e p="FeatureController.cs" t="Include" />
               <e p="HomeController.cs" t="Include" />
+              <e p="MapContactController.cs" t="Include" />
+              <e p="NewsController.cs" t="Include" />
               <e p="ProductCategoryController.cs" t="Include" />
+              <e p="ProductController.cs" t="Include" />
               <e p="ServiceController.cs" t="Include" />
               <e p="SliderController.cs" t="Include" />
               <e p="TeamController.cs" t="Include" />
@@ -29,6 +30,10 @@
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
               </e>
+              <e p="Contact" t="Include">
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
               <e p="ContactUs" t="Include">
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
@@ -38,6 +43,22 @@
                 <e p="Index.cshtml" t="Include" />
               </e>
               <e p="Home" t="Include">
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="MapContact" t="Include">
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="News" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Product" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
               </e>
               <e p="ProductCategory" t="Include">
@@ -77,6 +98,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="AboutController.cs" t="Include" />
+          <e p="AccountController.cs" t="Include" />
           <e p="ContactController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="NewsController.cs" t="Include" />
@@ -117,6 +139,8 @@
           <e p="20200323125508_Map table.Designer.cs" t="Include" />
           <e p="20200324121621_Product.cs" t="Include" />
           <e p="20200324121621_Product.Designer.cs" t="Include" />
+          <e p="20200409162357_Identity.cs" t="Include" />
+          <e p="20200409162357_Identity.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -134,6 +158,7 @@
           <e p="Slider.cs" t="Include" />
           <e p="Team.cs" t="Include" />
           <e p="Testimonial.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="Nursoft.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -151,6 +176,9 @@
             <e p="FolderProfile.pubxml" t="Include" />
           </e>
         </e>
+        <e p="service" t="Include">
+          <e p="EmailService.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="ViewComponent" t="Include">
           <e p="AddressViewComponent.cs" t="Include" />
@@ -159,8 +187,12 @@
         </e>
         <e p="ViewModels" t="Include">
           <e p="AboutViewModel.cs" t="Include" />
+          <e p="ForgotPasswordViewModel.cs" t="Include" />
           <e p="HomeIndexViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
           <e p="ProductViewModel.cs" t="Include" />
+          <e p="RegisterViewModel.cs" t="Include" />
+          <e p="ResetPasswordViewModel.cs" t="Include" />
           <e p="ServiceViewModel.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
@@ -168,6 +200,14 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="About" t="Include">
             <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Account" t="Include">
+            <e p="ForgotPassword.cshtml" t="Include" />
+            <e p="ForgotPasswordConfirmation.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+            <e p="ResetPassword.cshtml" t="Include" />
+            <e p="ResetPasswordConfirmation.cshtml" t="Include" />
           </e>
           <e p="Contact" t="Include">
             <e p="Index.cshtml" t="Include" />
@@ -1235,6 +1275,7 @@
             </e>
             <e p="shop" t="Include">
               <e p="126gb-ssd.jpg" t="Include" />
+              <e p="537cb77b-2b1e-4ceb-9c31-135ef75d6f60e15df24d-5ed0-4650-af01-1b86470c72181.jpg" t="Include" />
               <e p="cable-organizer.jpg" t="Include" />
               <e p="hdd.jpg" t="Include" />
               <e p="laptop-ac-power-adapter.jpg" t="Include" />

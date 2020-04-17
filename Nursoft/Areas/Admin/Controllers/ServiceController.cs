@@ -37,7 +37,7 @@ namespace Nursoft.Areas.Admin.Controllers
         //CREATE POST
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public async Task<IActionResult> Create(Service service)
+        public async Task<IActionResult> Create(Models.Service service)
         {
             if (!ModelState.IsValid)
             {
@@ -124,7 +124,7 @@ namespace Nursoft.Areas.Admin.Controllers
         //EDIT POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Service service)
+        public async Task<IActionResult> Edit(Models.Service service)
         {
             if (!ModelState.IsValid)
             {

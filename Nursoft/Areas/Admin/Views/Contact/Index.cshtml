@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Contact>
+
+@{
+    ViewBag.Title = "Əlaqə məktubları";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Əlaqə məktubları
+      </h1>
+      <ol class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a></li>
+        <li class="active">Əlaqə məktubları</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <partial name="_SuccessMessagePartial"/>
+              <partial name="_DangerMessagePartial"/>
+              <partial name="_WarningMessagePartial"/>
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Ad</th>
+                  <th>Email</th>
+                  <th>Məktub</th>
+                  <th>Hərəkətlər</th>
+                  <th style="display: none"></th>
+                  <th style="display: none"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var contact in Model)
+                {
+                  <tr>
+                    <td>@contact.Name</td>
+                    <td >@contact.Email</td>
+                    <td >@contact.Message</td>
+                    <td>
+                      <a asp-action="Delete" asp-controller="Contact" asp-route-id="@contact.Id" class="fa fa-remove"></a>
+                    </td>
+                    <td style="display: none"></td>
+                    <td style="display: none"></td>
+                  </tr>
+                }
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      <!-- /.box -->
+
+    </section>
+<!-- /.content -->

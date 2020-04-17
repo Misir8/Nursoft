@@ -5,7 +5,7 @@ namespace Nursoft.ViewModels
 {
     public class ServiceViewModel
     {
-        public IEnumerable<Service> Services { get; set; }
-        public Service Service { get; set; }
+        public IEnumerable<Models.Service> Services { get; set; }
+        public Models.Service Service { get; set; }
     }
 }

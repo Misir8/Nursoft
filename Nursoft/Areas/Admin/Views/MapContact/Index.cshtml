@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MapContact>
+
+@{
+    ViewBag.Title = "Yerləşmə yeri";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Yerləşmə yeri
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a>
+        </li>
+        <li class="active">Yerləşmə yeri</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+        
+        <!-- /.box-header -->
+        <div class="box-body">
+            <partial name="_WarningMessagePartial"/>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Şm.e</th>
+                    <th>Ş.U</th>
+                    <th>Hərəkətlər</th>
+                    <th style="display: none"></th>
+                    <th style="display: none"></th>
+                    <th style="display: none"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var mapContact in Model)
+                {
+                    <tr>
+                        <td>@mapContact.Lat</td>
+                        <td>@mapContact.Lng</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="MapContact" asp-route-id="@mapContact.Id" class="fa fa-pencil"></a>
+                        </td>
+
+                        <td style="display: none"></td>
+                        <td style="display: none"></td>
+                        <td style="display: none"></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</section>
+<!-- /.content -->
+

@@ -1,0 +1,54 @@
+﻿@model MapContact
+
+@{
+    ViewBag.Title = "Yerləşmə yerin dəyiş";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Yerləşmə yerin dəyişmək
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="Edit" asp-controller="MapContact" method="post" enctype="multipart/form-data">
+        <!-- Default box -->
+        <div class="box">
+            <div asp-validation-summary="All" style="color: red;"></div>
+            <div class="box-body">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Lat"></label>
+                        <input type="text" class="form-control" asp-for="Lat" placeholder="">
+                        <span asp-validation-for="Lat" style="color: red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Lng"></label>
+                        <input type="text" class="form-control" asp-for="Lng" placeholder="">
+                        <span asp-validation-for="Lng" style="color: red"></span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a asp-action="Index" asp-controller="MapContact" class="btn btn-default">Geriyə qayıt</a>
+                <button type="submit" class="btn btn-warning pull-right">Dəyiş</button>
+            </div>
+            <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->
+
+@section script
+{
+    <partial name="_ValidationPartial"/>
+}
