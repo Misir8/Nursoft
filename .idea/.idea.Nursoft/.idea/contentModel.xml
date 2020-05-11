@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Nursoft.-1882759294.00" t="ExcludeRecursive" />
-    <e p="C:\Users\User\RiderProjects\Nursoft" t="IncludeFlat">
+    <e p="C:\Users\User\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Nursoft.1130679422.00" t="ExcludeRecursive" />
+    <e p="C:\Users\User\Desktop\projects\Nursoft" t="IncludeFlat">
       <e p="Nursoft" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -1232,6 +1232,7 @@
               <e p="article-3.jpg" t="Include" />
               <e p="article-inner-1.jpg" t="Include" />
               <e p="article-inner-2.jpg" t="Include" />
+              <e p="c071207b-0134-480f-9f8b-3e008800939637d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="member-1.jpg" t="Include" />
               <e p="member-2.jpg" t="Include" />
               <e p="member-3.jpg" t="Include" />
@@ -1254,9 +1255,12 @@
             </e>
             <e p="service" t="Include">
               <e p="01b1e40c-7d28-4d02-a5fa-c2bbc48e8cafshortcodes.png" t="Include" />
+              <e p="a6da768f-d0e3-40f8-9449-ec145137f30837d598e5a04344da81c76621ba273915.jpg" t="Include" />
+              <e p="c5f8d68b-d445-4956-bb45-53b869aca03637d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="cpu-upgrade.jpg" t="Include" />
               <e p="d11369e6-8a19-4225-8106-7e783c6f4a31top-header.png" t="Include" />
               <e p="data-recovery.jpg" t="Include" />
+              <e p="emblemnur.png" t="Include" />
               <e p="game-console.jpg" t="Include" />
               <e p="item-1.jpg" t="Include" />
               <e p="item-2.jpg" t="Include" />
@@ -1264,7 +1268,6 @@
               <e p="item-4.jpg" t="Include" />
               <e p="item-5.jpg" t="Include" />
               <e p="item-6.jpg" t="Include" />
-              <e p="logo-alt.png" t="Include" />
               <e p="logo.png" t="Include" />
               <e p="motherboard-1.jpg" t="Include" />
               <e p="motherboard-3.jpg" t="Include" />

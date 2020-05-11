@@ -49,8 +49,8 @@
     <section class="content-section">
         <div class="container">
             <div class="section-head text-center container-md">
-                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Why choose us</h2>
-                <p data-inview-showup="showup-translate-left">Some Of Our Features</p>
+                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Niyə bizi seçirlər</h2>
+                <p data-inview-showup="showup-translate-left">Bizim əsas xüsusiyyətlərimiz</p>
             </div>
             <div class="row cols-md rows-lg text-center">
                 <div class="md-col-12">
@@ -76,8 +76,8 @@
 <section class="muted-bg solid-section">
     <div class="container">
         <div class="section-head text-center container-md">
-            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Services</h2>
-            <p data-inview-showup="showup-translate-left">We offer a full range of repair services provided by an experienced and specialized team</p>
+            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Xidmətlərimiz</h2>
+            <p data-inview-showup="showup-translate-left">Təcrübəli ixtisaslaşdırılmış komanda tərəfindən professional xidmət təklif edirik</p>
         </div>
         <div class="row cols-md rows-md">
             @foreach (var service in Model.Services)
@@ -101,8 +101,7 @@
                             <div class="item-title text-upper">
                                 <a  asp-action="Service" asp-route-id="@service.Id" asp-controller="Services">@Html.Raw(service.Name)</a>
                             </div>
-                            <div class="item-text">@Html.Raw(service.Description)</div>
-                            <a asp-action="Service" asp-route-id="@service.Id" asp-controller="Services" class="btn btn-md btns-bordered pull-right text-upper">read more</a>
+                            <a asp-action="Service" asp-route-id="@service.Id" asp-controller="Services" class="btn btn-md btns-bordered pull-right text-upper">Ətraflı</a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +110,7 @@
         <div class="text-center shift-xl">
             <a class="btn text-upper" asp-action="Index" asp-controller="Services" data-inview-showup="showup-translate-up">
                 <i class="fas fa-th-large" aria-hidden="true"></i>&nbsp;
-                &nbsp;view all services
+                &nbsp;Bütün xidmətləri göstər
             </a>
         </div>
     </div>
@@ -149,8 +148,8 @@
 <section class="content-section">
     <div class="container">
         <div class="section-head text-center container-md">
-            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">What people say</h2>
-            <p data-inview-showup="showup-translate-left">Real customers reviews</p>
+            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">İnsanlar nə deyir</h2>
+            <p data-inview-showup="showup-translate-left">Real müştərilərin rəyi</p>
         </div>
         <div class="owl-carousel" data-inview-showup="showup-translate-up" data-owl-dots="true">
             @foreach (var testimonial in Model.Testimonials)
@@ -179,11 +178,11 @@
                 <i class="fas fa-bicycle" aria-hidden="true"></i>
             </div>
             <div class="contact-content">
-                <div class="contact-title">Request free consultation</div>
-                <div class="text-justify only-xs-text-justify-center">Get answers and advice from people you want it from.</div>
+                <div class="contact-title">Pulsuz konsultasiya sifariş et</div>
+                <div class="text-justify only-xs-text-justify-center">İstədiyiniz işçidən cavab və məsləhətlər alın.</div>
             </div>
             <div class="contact-btn">
-                <a href="contact-us.html" class="btn btns-white text-upper">Contact Us</a>
+                <a asp-action="Index" asp-controller="Contact" class="btn btns-white text-upper">Bizimlə əlaqə</a>
             </div>
         </div>
     </div>

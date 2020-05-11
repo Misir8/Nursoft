@@ -15,14 +15,11 @@
         <div class="container" data-inview-showup="showup-translate-down">
             <ul class="page-path">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a asp-action="Index" asp-controller="Home">Əsas</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </li><li>Pages</li>
-                <li class="path-separator">
-                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </li><li>About Us</li>
+                </li><li>Haqqında</li>
             </ul>
         </div>
     </div>
@@ -33,7 +30,7 @@
             @foreach (var about in Model.Abouts)
             {
                 <div class="md-col-6 text-center md-text-left">
-                    <h2 class="text-upper text-semibold">What we do</h2>
+                    <h2 class="text-upper text-semibold">Şirkət haqqında</h2>
                     <p>@about.Description</p>
                 </div>
                 <div class="md-col-6 md-fix-container">
@@ -47,10 +44,12 @@
     <div class="container">
         <div class="row cols-md rows-xl">
             <div class="md-col-3 text-center md-text-left">
-                <h3 class="text-upper text-semibold">Our team</h3>
-                <p>Meet with our qualified and expert team. We are specialized in our individual field. We have enough skill and tested. That’s why you’re getting the quality repair services.</p>
+                <h3 class="text-upper text-semibold">Bizim komanda</h3>
+                <p>
+                    Bizim ixtisaslı komandamızla tanış olun. Kifayət qədər bacarıqlarımız və təcrübəmiz var. Keyfiyyətli təmir xidməti ala bilərsiniz.
+                </p>
                 <div class="shift-lg">
-                    <a class="btn text-upper" href="contact-us.html">Contact us</a>
+                    <a class="btn text-upper" asp-controller="Contact" asp-action="Index">Bizimlə əlaqə</a>
                 </div>
             </div>
             @foreach (var team in Model.Teams)
