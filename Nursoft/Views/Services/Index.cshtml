@@ -25,11 +25,11 @@
         <div class="container" data-inview-showup="showup-translate-down">
             <ul class="page-path">
                 <li>
-                    <a asp-action="Index" asp-controller="Home">Home</a>
+                    <a asp-action="Index" asp-controller="Home">Əsas</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </li><li>Services</li>
+                </li><li>Xidmətlər</li>
             </ul>
         </div>
     </div>
@@ -60,7 +60,7 @@
                     <a asp-action="Service" asp-route-id="@service.Id">@Html.Raw(service.Name)</a>
                 </div>
                 <div class="item-text">@Html.Raw(service.Description)</div>
-                <a asp-action="Service" asp-route-id="@service.Id" class="btn btn-md btns-bordered text-upper pull-right">read more</a>
+                <a asp-action="Service" asp-route-id="@service.Id" class="btn btn-md btns-bordered text-upper pull-right">ətraflı</a>
             </div>
         </div>
     </div>

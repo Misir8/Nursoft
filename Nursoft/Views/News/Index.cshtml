@@ -17,11 +17,11 @@
         <div class="container" data-inview-showup="showup-translate-down">
             <ul class="page-path">
                 <li>
-                    <a asp-action="Index" asp-controller="Home">Home</a>
+                    <a asp-action="Index" asp-controller="Home">Əsas</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </li><li>News</li>
+                </li><li>Xəbərlər</li>
             </ul>
         </div>
     </div>
@@ -52,7 +52,7 @@
                         <p>@news.Subtitle</p>
                         <div class="table">
                             <div class="col text-right">
-                                <a asp-action="Details" asp-route-id="@news.Id" class="btn btn-md btns-bordered text-upper">read more</a>
+                                <a asp-action="Details" asp-route-id="@news.Id" class="btn btn-md btns-bordered text-upper">ətraflı</a>
                             </div>
                         </div>
                     </article>

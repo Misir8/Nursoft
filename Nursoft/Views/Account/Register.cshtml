@@ -15,12 +15,12 @@
         <div class="container" data-inview-showup="showup-translate-down">
             <ul class="page-path">
                 <li>
-                    <a asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="Home" asp-action="Index">Əsas</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </li>
-                <li>Sign In</li>
+                <li>Qeydiyyat</li>
             </ul>
         </div>
     </div>
@@ -28,8 +28,7 @@
 <section class="content-section">
     <div class="container">
         <div class="section-head text-center container-md">
-            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Sign in</h2>
-            <p data-inview-showup="showup-translate-left">Sign in to your account to discover all great features in this template.</p>
+            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Qeydiyyat</h2>
         </div>
         <form class="sign-in-form" method="post" asp-controller="Account" asp-action="Register">
             <div class="medium-container">
@@ -40,22 +39,22 @@
                             <div class="offs-lg">
                                 <div class="field-group">
                                     <div class="field-wrap">
-                                        <input class="field-control" asp-for="Email" placeholder="Your Login or email" required="required"> <span class="field-back"></span>
+                                        <input class="field-control" asp-for="Email" placeholder="Email" required="required"> <span class="field-back"></span>
                                     </div>
                                 </div>
                                 <div class="field-group">
                                     <div class="field-wrap">
-                                        <input class="field-control" asp-for="Password" type="password" placeholder="Password" required="required"> <span class="field-back"></span>
+                                        <input class="field-control" asp-for="Password" type="password" placeholder="Parol" required="required"> <span class="field-back"></span>
                                     </div>
                                 </div>
                                 <div class="field-group">
                                     <div class="field-wrap">
-                                        <input class="field-control" asp-for="PasswordConfirm" type="password" placeholder="Password" required="required"> <span class="field-back"></span>
+                                        <input class="field-control" asp-for="PasswordConfirm" type="password" placeholder="Parolu təstiq et" required="required"> <span class="field-back"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button class="btn text-upper" type="submit">Sign In</button>
+                                <button class="btn text-upper" type="submit">Qeydiyyat</button>
                             </div>
                         </div>
                     </div>
@@ -67,27 +66,6 @@
 <a href="#" class="scroll-top disabled">
     <i class="fas fa-angle-up" aria-hidden="true"></i>
 </a>
-<div class="singlepage-block collapse alt-bg" data-block="search" data-show-block-class="animation-scale-top-right" data-hide-block-class="animation-unscale-top-right">
-    <a href="#" class="close-link" data-close-block>
-        <i class="fas fa-times" aria-hidden="true"></i>
-    </a>
-    <div class="pos-v-center col-12">
-        <div class="container">
-            <div class="row cols-md rows-md">
-                <div class="lg-col-9 md-col-8 sm-col-12">
-                    <div class="field-group">
-                        <div class="field-wrap">
-                            <input class="field-control" name="search" placeholder="Search Tags" required="required"> <span class="field-back"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg-col-3 md-col-4 sm-col-6">
-                    <button class="btn btns-white-bordered text-upper" type="submit">search</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="loader-block">
     <div class="loader-back alt-bg"></div>
     <div class="loader-image">

@@ -14,17 +14,17 @@
         <div class="container" data-inview-showup="showup-translate-down">
             <ul class="page-path">
                 <li>
-                    <a asp-action="Index" asp-controller="Home">Home</a>
+                    <a asp-action="Index" asp-controller="Home">Əsas</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </li>
                 <li>
-                    <a asp-action="Index" asp-controller="Services">Services</a>
+                    <a asp-action="Index" asp-controller="Services">Xidmətlər</a>
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </li><li>Service</li>
+                </li><li>@Html.Raw(Model.Service.Name)</li>
             </ul>
         </div>
     </div>
@@ -46,7 +46,7 @@
     </div>
     <aside class="page-sidebar content-section">
         <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Our Services</h5>
+            <h5 class="shift-sm offs-md">Bizim xidmətlər</h5>
             <ul class="spaced-list text-medium solid-color">
                 @foreach (var service in Model.Services)
                 {
@@ -64,28 +64,6 @@
 <a href="#" class="scroll-top disabled">
     <i class="fas fa-angle-up" aria-hidden="true"></i>
 </a>
-<div class="singlepage-block collapse alt-bg" data-block="search" data-show-block-class="animation-scale-top-right" data-hide-block-class="animation-unscale-top-right">
-    <a href="#" class="close-link" data-close-block>
-        <i class="fas fa-times" aria-hidden="true"></i>
-    </a>
-    <div class="pos-v-center col-12">
-        <div class="container">
-            <div class="row cols-md rows-md">
-                <div class="lg-col-9 md-col-8 sm-col-12">
-                    <div class="field-group">
-                        <div class="field-wrap">
-                            <input class="field-control" name="search" placeholder="Search Tags" required="required">
-                            <span class="field-back"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg-col-3 md-col-4 sm-col-6">
-                    <button class="btn btns-white-bordered text-upper" type="submit">search</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="loader-block">
     <div class="loader-back alt-bg"></div>
     <div class="loader-image">
