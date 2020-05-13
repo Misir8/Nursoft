@@ -25,6 +25,10 @@ namespace Nursoft.Controllers
             return View();
         }
 
+        public IActionResult ConfirmPassword()
+        {
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
@@ -45,10 +49,8 @@ namespace Nursoft.Controllers
                         protocol: HttpContext.Request.Scheme);
                     EmailService emailService = new EmailService();
                     await emailService.SendEmailAsync(model.Email, "Confirm your account",
-                        $"Подтвердите регистрацию, перейдя по ссылке: <a href='{callbackUrl}'>link</a>");
-
-                    return Content(
-                        "Для завершения регистрации проверьте электронную почту и перейдите по ссылке, указанной в письме");
+                        $"Linkə keçid edərək qeydiyyatı təstiqləyin: <a href='{callbackUrl}'>link</a>");
+                    return RedirectToAction(nameof(ConfirmPassword));
                 }
                 else
                 {

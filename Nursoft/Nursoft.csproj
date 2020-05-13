@@ -19,7 +19,7 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="2.0.0-preview1-final" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0-preview.3.20181.2" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
-      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
     </ItemGroup>
 
     <ItemGroup>
@@ -29,6 +29,10 @@
       <Content Remove="wwwroot\images\service\b2fe1bf7-ce78-4560-96e0-71eac52f3c23endless.png" />
       <Content Remove="wwwroot\images\service\dd7cc0fd-1ed3-41ef-8f9c-13925f48ae04brothers.png" />
       <Content Remove="wwwroot\images\service\ef0a7a30-ca88-415f-9db2-e71e6a29e058endless.png" />
+      <Content Update="Views\Account\ConfirmPassword.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
     </ItemGroup>
 
 

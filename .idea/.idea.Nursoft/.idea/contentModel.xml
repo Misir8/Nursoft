@@ -202,6 +202,7 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Account" t="Include">
+            <e p="ConfirmPassword.cshtml" t="Include" />
             <e p="ForgotPassword.cshtml" t="Include" />
             <e p="ForgotPasswordConfirmation.cshtml" t="Include" />
             <e p="Login.cshtml" t="Include" />
@@ -1271,12 +1272,14 @@
               <e p="logo.png" t="Include" />
               <e p="motherboard-1.jpg" t="Include" />
               <e p="motherboard-3.jpg" t="Include" />
+              <e p="nursoft.png" t="Include" />
               <e p="service.jpg" t="Include" />
               <e p="serviceman-2.jpg" t="Include" />
               <e p="serviceman.jpg" t="Include" />
               <e p="touch-screen-replacement.jpg" t="Include" />
             </e>
             <e p="shop" t="Include">
+              <e p="06583275-f911-4767-8bce-1c24dbab6cd337d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="126gb-ssd.jpg" t="Include" />
               <e p="537cb77b-2b1e-4ceb-9c31-135ef75d6f60e15df24d-5ed0-4650-af01-1b86470c72181.jpg" t="Include" />
               <e p="cable-organizer.jpg" t="Include" />

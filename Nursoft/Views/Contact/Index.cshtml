@@ -59,7 +59,7 @@
 <section class="content-section">
     <div class="container">
         <div class="section-head text-center container-md">
-            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Request a Callback</h2>
+            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Bizimlə əlaqə</h2>
             @if (@TempData["successContact"] != null)
             {
                 <div class="alert" style="background: #3b804a;color: white">@TempData["successContact"]</div>
@@ -68,7 +68,7 @@
         <form class="md-col-8 md-col-offs-2" data-inview-showup="showup-translate-down" asp-action="Index" method="post">
             <div class="field-group">
                 <div class="field-wrap">
-                    <input class="field-control" asp-for="Name" placeholder="Name" required="required"> <span class="field-back"></span>
+                    <input class="field-control" asp-for="Name" placeholder="Ad" required="required"> <span class="field-back"></span>
                 </div>
                 <span class="text-danger" asp-validation-for="Name"></span>
             </div>
@@ -80,12 +80,12 @@
             </div>
             <div class="field-group">
                 <div class="field-wrap">
-                    <textarea class="field-control" asp-for="Message" placeholder="Message" required="required"></textarea> <span class="field-back"></span>
+                    <textarea class="field-control" asp-for="Message" placeholder="Mesaj" required="required"></textarea> <span class="field-back"></span>
                 </div>
                 <span class="text-danger" asp-validation-for="Message"></span>
             </div>
             <div class="btn-block text-center">
-                <input class="btn" style="background: #1c8bc1;color: white" type="submit" value="Send">
+                <input class="btn" style="background: #1c8bc1;color: white" type="submit" value="Göndər">
             </div>
         </form>
     </div>
