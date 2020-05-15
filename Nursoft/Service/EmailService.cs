@@ -10,7 +10,7 @@ namespace Nursoft.Service
         {
             var emailMessage = new MimeMessage();
 
-            emailMessage.From.Add(new MailboxAddress("Nursoft saytının administrasiyası", "misiraskerov1@gmail.com"));
+            emailMessage.From.Add(new MailboxAddress("Nursoft saytının administrasiyası", "admin@nursoft.az"));
             emailMessage.To.Add(new MailboxAddress("", email));
             emailMessage.Subject = subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
@@ -20,8 +20,8 @@ namespace Nursoft.Service
 
             using (var client = new SmtpClient())
             {
-                await client.ConnectAsync("smtp.gmail.com", 587, false);
-                await client.AuthenticateAsync("misiraskerov1@gmail.com", "Mixan050");
+                await client.ConnectAsync("mail.hosting.reg.ru", 587, false);
+                await client.AuthenticateAsync("admin@nursoft.az", "nursoft2020");
                 await client.SendAsync(emailMessage);
 
                 await client.DisconnectAsync(true);

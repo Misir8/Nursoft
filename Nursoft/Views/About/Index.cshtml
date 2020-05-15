@@ -1,7 +1,7 @@
 ﻿@model AboutViewModel
 
 @{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Haqqında";
     Layout = "_Layout";
 }
 
@@ -30,7 +30,7 @@
             @foreach (var about in Model.Abouts)
             {
                 <div class="md-col-6 text-center md-text-left">
-                    <h2 class="text-upper text-semibold">Şirkət haqqında</h2>
+                    <h2 class="text-upper text-semibold">ŞİRKƏT HAQQINDA</h2>
                     <p>@about.Description</p>
                 </div>
                 <div class="md-col-6 md-fix-container">
@@ -44,7 +44,7 @@
     <div class="container">
         <div class="row cols-md rows-xl">
             <div class="md-col-3 text-center md-text-left">
-                <h3 class="text-upper text-semibold">Bizim komanda</h3>
+                <h3 class="text-upper text-semibold">BİZİM KOMANDA</h3>
                 <p>
                     Bizim ixtisaslı komandamızla tanış olun. Kifayət qədər bacarıqlarımız və təcrübəmiz var. Keyfiyyətli təmir xidməti ala bilərsiniz.
                 </p>
@@ -64,17 +64,7 @@
                         <div class="member-info muted-bg text-center">
                             <div class="member-title">@team.Name</div>
                             <div class="member-subtitle">@team.Position</div>
-                            <div class="cols-list cols-sm socials inline-block">
-                                <a href="#" class="list-item">
-                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="list-item">
-                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="list-item">
-                                    <i class="fab fa-google-plus-g" aria-hidden="true"></i>
-                                </a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
