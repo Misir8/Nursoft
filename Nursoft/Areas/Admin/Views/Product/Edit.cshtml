@@ -26,7 +26,11 @@
                         <input type="text" class="form-control" asp-for="Name" placeholder="">
                         <span style="color: red" asp-validation-for="Name"></span>
                     </div>
-
+                    <div class="form-group">
+                        <label asp-for="Price"></label>
+                        <input asp-for="Price" type="number" min="0" class="form-control" placeholder="">
+                        <span asp-validation-for="Price"></span>
+                    </div>
                     <div class="form-group">
                         <label asp-for="CategoryProductId">Kateqoriya</label>
                         <select class="form-control" asp-for="CategoryProductId" asp-items="ViewBag.Categories as SelectList">
@@ -35,17 +39,17 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Photo"></label>
-                        <input type="file" class="form-control" asp-for="Photo" name="Photo" accept="image/jpeg, image/jpg, image/png, image/gif"/>
+                        <input type="file" class="form-control" asp-for="Photo" name="Photo" accept="image/jpeg, image/jpg, image/png, image/gif" />
                         <span style="color: red" asp-validation-for="Photo" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label>İndiki Şəkil</label>
-                        <img src="~/images/shop/@Model.Image" alt="@Model.Image"/>
-                        <input type="hidden" name="Image" value="@Model.Image"/>
+                        <img src="~/images/shop/@Model.Image" alt="@Model.Image" />
+                        <input type="hidden" name="Image" value="@Model.Image" />
                     </div>
                     <div class="form-group">
                         <label asp-for="Description"></label>
-                        <textarea  type="text" class="form-control" asp-for="Description" placeholder=""></textarea >
+                        <textarea type="text" class="form-control" asp-for="Description" placeholder=""></textarea>
                         <span style="color: red" asp-validation-for="Description"></span>
                     </div>
 

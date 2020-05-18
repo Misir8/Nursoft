@@ -1,0 +1,113 @@
+﻿@model CartViewModel
+@{
+    ViewData["Title"] = "Kart";
+    Layout = "_Layout";
+}
+
+
+<section class="with-bg solid-section">
+    <div class="theme-back"></div>
+    <div class="container page-info">
+    </div>
+    <div class="section-footer">
+        <div class="container" data-inview-showup="showup-translate-down">
+            <ul class="page-path">
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Əsas</a>
+                </li>
+                <li class="path-separator">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li>Səbət</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="clearfix page-sidebar-right container">
+        <section class="content-section">
+            @if (Model.CartItems.Count > 0)
+            {
+                <div class="container">
+                    <h2 class="text-upper" data-inview-showup="showup-translate-up">Your cart items</h2>
+                    <div class="cart-line-items offs-lg" data-inview-showup="showup-translate-up">
+                        <div class="items-head text-upper">
+                            <div class="item-image">Product</div>
+                            <div class="item-name">Name</div>
+                            <div class="item-price">Price</div>
+                            <div class="item-quantity">Quantity</div>
+                            <div class="item-total">Total</div>
+                            <div class="item-remove">&nbsp;</div>
+                        </div>
+                        <div class="items">
+                            @foreach (var item in Model.CartItems)
+                            {
+                                <div class="item cart-item-line" data-inview-showup="showup-translate-up">
+                                    <div class="item-image">
+                                        <div class="responsive-1by1">
+                                            <img src="images/shop/@item.Image" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-name">
+                                        <a href="shop-item.html" class="content-link">@item.ProductName</a>
+                                    </div>
+                                    <div class="item-price">@item.Price.ToString("C2")</div>
+                                    <div class="item-quantity">
+                                        <div class="field-group field-spin-sides">
+                                            <div class="field-wrap">
+                                                <input class="field-control montserrat-bold alt-color text-sm text-center" type="text" name="quantity" value="@item.Quantity" min="0" max="100" data-action-role="field-wheel-spin field-arrows-spin" autocomplete="off">
+                                                <span class="field-back"></span>
+                                                <span class="field-actions">
+                                                    <a class="field-increment"  asp-action="Add" asp-route-id="@item.ProductId">
+                                                        <i class="fas fa-plus" aria-hidden="true"></i>
+                                                    </a>
+                                                    <span class="field-decrement" data-action-role="field-decrement">
+                                                        <i class="fas fa-minus" aria-hidden="true"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-total">@Model.CartItems.Where(x => x.ProductId == item.ProductId).Sum(X => X.Quantity * X.Price).ToString("C2")</div>
+                                    <div class="item-remove">
+                                        <a href="#" class="remove"><i class="fas fa-times"></i></a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="row cols-md rows-md offs-xl" data-inview-showup="showup-translate-up">
+                        <div class="md-col-3 sm-col-6">
+                            <button class="btn btns-bordered text-upper col-12">clear shopping cart</button>
+                        </div>
+                        <div class="md-col-3 sm-col-6">
+                            <button class="btn btns-bordered text-upper col-12">update shopping cart</button>
+                        </div>
+                        <div class="md-col-3 md-push-3 sm-col-12">
+                            <a href="#" class="btn btns-bordered text-upper col-12">continue shopping</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-right" colspan="4">Grand Total: @Model.GrandTotal.ToString("C2")</h3>
+
+            }
+            else
+            {
+                <h3 class="display-3 text-center">Səbət boşdur</h3>
+            }
+        </section>
+
+</div>
+<a href="#" class="scroll-top disabled">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
+</a>
+<div class="loader-block">
+    <div class="loader-back alt-bg"></div>
+    <div class="loader-image">
+        <img class="image" src="~/images/parts/loader.gif" alt="">
+    </div>
+</div>
+
+<section class="content-section">
+    
+</section>

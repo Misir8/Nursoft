@@ -21,5 +21,9 @@ namespace Nursoft.Models
         [DisplayName("Kateqoriya")]
         public CategoryProduct CategoryProduct { get; set; }
         public int CategoryProductId { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
+        [DisplayName("Qiymət")]
+        public decimal Price { get; set; }
     }
 }

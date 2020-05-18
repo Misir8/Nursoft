@@ -161,6 +161,7 @@ namespace Nursoft.Areas.Admin.Controllers
             productDb.Name = product.Name;
             productDb.Description = product.Description;
             productDb.CategoryProductId = product.CategoryProductId;
+            productDb.Price = product.Price;
             await _context.SaveChangesAsync();
             TempData["warning"] = "Məhsul uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));
