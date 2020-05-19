@@ -48,8 +48,55 @@ namespace Nursoft.Controllers
             }
 
             HttpContext.Session.SetJson("Cart", cart);
+            if (HttpContext.Request.Headers["X-Requested-With"] != "XMLHttpRequest")
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                return ViewComponent("SmallCart");
+            }
+
+            
+        }
+
+        public async Task<ActionResult> Decrease(int id)
+        {
+            List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart");
+            CartItem cartItem = cart.Where(x => x.ProductId == id).FirstOrDefault();
+
+            if (cartItem.Quantity > 1)
+            {
+                --cartItem.Quantity;
+            }
+            else
+            {
+                cart.RemoveAll(x => x.ProductId == id);
+            }
+
+            HttpContext.Session.SetJson("Cart", cart);
+            if (cart.Count == 0)
+            {
+                HttpContext.Session.Remove("Cart");
+            }
 
             return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Delete(int id)
+        {
+            List<CartItem> cart = HttpContext.Session.GetJson<List<CartItem>>("Cart");
+            CartItem cartItem = cart.Where(x => x.ProductId == id).FirstOrDefault();
+            cart.RemoveAll(x => x.ProductId == id);
+            HttpContext.Session.SetJson("Cart", cart);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<ActionResult> Clear()
+        { 
+           HttpContext.Session.Remove("Cart");
+
+           return RedirectToAction(nameof(Index));
         }
     }
 }

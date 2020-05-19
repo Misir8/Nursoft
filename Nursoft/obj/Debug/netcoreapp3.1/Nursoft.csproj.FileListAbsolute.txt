@@ -423,3 +423,4 @@ C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Nursoft.p
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Nursoft.genruntimeconfig.cache
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Views\Account\ConfirmPassword.cshtml.g.cs
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Views\Cart\_PaypalParthial.cshtml.g.cs

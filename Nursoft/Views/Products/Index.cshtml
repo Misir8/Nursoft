@@ -92,6 +92,18 @@
                         document.querySelector(".partial").innerHTML = r;
                     }
                 });
-            });
+    });
+
+        $(function () {
+            $(".addToCart").click(function (e) {
+                e.preventDefault();
+                let id = $(this).data("id");
+                $.get("/cart/add/" + id, {}, function (data) {
+                    let number = document.querySelector(".item-label-sale")
+                    number.textContent = data;
+                    $.notify("Məhsul uğurla səbətə əlavə edildi!", "success" );
+                });
+            })
+        });
     </script>
 }
