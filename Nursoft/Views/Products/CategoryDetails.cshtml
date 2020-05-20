@@ -50,10 +50,13 @@
                                         </div>
                                         @Model.CategoryProduct.Name
                                     </div>
+                                    <div class="item-prices">
+                                        <div class="item-price">@product.Price.ToString("C2")</div>
+                                    </div>
                                 </div>
                                 <div class="item-links">
                                     <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@product.Id" class="btn text-upper btn-md btns-bordered">view</a>
-                                    <a asp-action="Add" asp-controller="Cart" asp-route-id="@product.Id" data-id="@product.Id" class="btn text-upper btn-md btns-bordered addToCart">Add to cart</a>
+                                    <a asp-action="Add" asp-controller="Cart" asp-route-id="@product.Id" data-id="@product.Id" class="btn text-upper btn-md addToCart">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -85,6 +88,7 @@
                 $.get("/cart/add/" + id, {}, function (data) {
                     let number = document.querySelector(".item-label-sale")
                     number.textContent = data;
+                    $.notify("Məhsul uğurla səbətə əlavə edildi!", "success");
                 });
             })
         });

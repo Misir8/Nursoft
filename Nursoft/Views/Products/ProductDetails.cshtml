@@ -1,11 +1,9 @@
-﻿@model Product
+﻿@model ProductViewModel
 
 @{
-    ViewBag.Title = @Model.Name;
+    ViewBag.Title = Model.Product.Name;
     Layout = "_Layout";
 }
-
-
 
 <section class="with-bg solid-section">
     <div class="theme-back"></div>
@@ -26,31 +24,133 @@
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </li>
-                <li>@Model.Name</li>
+                <li>@Model.Product.Name</li>
             </ul>
         </div>
     </div>
 </section>
 <div class="clearfix page-sidebar-right container">
-    <div class="page-content" style="padding-right:0">
+    <div class="page-content">
         <section class="content-section">
-            <div class="article">
-                <div class="cols-md offs-md" data-inview-showup="showup-translate-up">
-                    <div class="table">
-                        <div class="col col-middle">
-                            <h3 class="reset-offs text-upper">@Model.Name</h3>
+            <div class="product">
+                <div class="row offs-lg cols-md rows-lg offs-lg" data-inview-showup="showup-translate-up">
+                    <div class="md-col-5">
+                        <div class="responsive-1by1 offs-md" data-preview-image="product-preview"></div>
+                        <div class="owl-carousel" data-autoplay="false" data-owl-loop="false" data-owl-responsive="3;3;3;3">
+                            <div class="item">
+                                <a class="responsive-1by1" target="_blank" href="~/images/shop/@Model.Product.Image" data-preview-image-source="product-preview"><img src="~/images/shop/@Model.Product.Image" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-7">
+                        <h4 class="text-upper offs-sm">@Model.Product.Name</h4>
+                        <div class="user-feedback">
+                            <div class="user-rating">
+                                <span class="rating-star"><i class="fas fa-star" aria-hidden="true"></i></span>
+                                <span class="rating-star"><i class="fas fa-star" aria-hidden="true"></i></span>
+                                <span class="rating-star"><i class="fas fa-star" aria-hidden="true"></i></span>
+                                <span class="rating-star"><i class="fas fa-star" aria-hidden="true"></i></span>
+                                <span class="rating-star"><i class="fas fa-star" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                        <div class="product-price">@Model.Product.Price.ToString("C2")</div>
+                        <div class="product-short">@Html.Raw(Model.Product.Description)</div>
+                        <form class="out-lg">
+                            <div class="row cols-md rows-md">
+                                <div class="sm-col-7">
+                                    <a class="btn text-upper col-12 addToCart" asp-action="Add" asp-controller="Cart" asp-route-id="@Model.Product.Id" data-id="@Model.Product.Id"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp; add to cart</a>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="description-lines">
+                            <div class="description-line">
+                                <span class="text-upper description-title">Categories:</span>
+                                <span class="description-value colorful-text"><a asp-action="CategoryDetails" asp-route-id="@Model.CategoryProduct.Id">@Model.CategoryProduct.Name</a></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <img class="col-6 offs-md" data-inview-showup="showup-translate-up" src="~/images/shop/@Model.Image" alt="@Model.Image">
-                <div class="col-12 content-text clearfix" data-inview-showup="showup-translate-up">
-                    <div>@Html.Raw(Model.Description)</div>
-                </div>
-                    
-                <div class="table offs-lg" data-inview-showup="showup-translate-up">
+                <div class="tabs-lined" data-action-role="tabs" data-inview-showup="showup-translate-up">
+                    <ul class="tabs-head">
+                        <li>
+                            <a href="#" data-tab="description">Description</a>
+                        </li>
+                    </ul>
+                    <div class="tabs-line">
+                        <div class="tab-active-line" data-action-role="active-tab-line"></div>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-content" data-tab-content="description">
+                            <div class="content-text">
+                                <h6>Specification:</h6>
+                                <ul>
+                                    <li>- Item Name: USB Hub Combo</li>
+                                    <li>- USB Ports: 3 Ports</li>
+                                    <li>- Card Reader: Support MS,M2,SD/MMC,TF card</li>
+                                    <li>- Cable: 3.0 for 20cm,2.0 for 40cm</li>
+                                    <li>- Size: 77*45*25mm</li>
+                                    <li>- Date Transfer Rate: Upto 480mbps/5Gmbps</li>
+                                    <li>- Color: White</li>
+                                    <li>- Compatible: Windows XP/2000/Vista/WIN 7/8/10,Mac OS,etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="top-separator out-lg" data-inview-showup="showup-translate-up"></div>
         </section>
     </div>
+    <aside class="page-sidebar content-section">
+        <section class="side-content-section" data-inview-showup="showup-translate-up">
+            <h5 class="shift-sm offs-md">Product Category</h5>
+            <ul class="categories-list text-medium solid-color">
+                @foreach (var category in Model.CategoryProducts)
+                {
+                    <li>
+                        <span class="category-line"><a class="content-link" asp-action="CategoryDetails" asp-route-id="@category.Id"><span class="single-line-text">@category.Name</span></a></span>
+                    </li>
+                }
+            </ul>
+        </section>
+
+        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+        <section class="side-content-section" data-inview-showup="showup-translate-up">
+            <div class="block-md muted-bg">
+                <h5 class="text-upper">Free consultation</h5>
+                <p>Get answers and advice from people you want it from.</p>
+                <div class="buttons-block text-right">
+                    <a class="btn btn-md text-upper" asp-controller="Contact" asp-action="Index">contact us</a>
+                </div>
+            </div>
+        </section>
+        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+    </aside>
 </div>
+<a href="#" class="scroll-top disabled"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+<div class="loader-block">
+    <div class="loader-back alt-bg"></div>
+    <div class="loader-image">
+        <img class="image" src="images/parts/loader.gif" alt="">
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script>
+
+
+        $(function () {
+            $(".addToCart").click(function (e) {
+                e.preventDefault();
+                let id = $(this).data("id");
+                $.get("/cart/add/" + id, {}, function (data) {
+                    let number = document.querySelector(".item-label-sale")
+                    number.textContent = data;
+                    $.notify("Məhsul uğurla səbətə əlavə edildi!", "success");
+                });
+            })
+        });
+    </script>
+}

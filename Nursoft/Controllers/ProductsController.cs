@@ -64,14 +64,19 @@ namespace Nursoft.Controllers
             {
                 return NotFound();
             }
-
-            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
-            if (product == null)
+            var product = _context.Products.FirstOrDefault(p => p.Id == id);
+            var productVM = new ProductViewModel
+            {
+                Product = product,
+                CategoryProduct = _context.CategoryProducts.FirstOrDefault(c => c.Id == product.CategoryProductId),
+                CategoryProducts = _context.CategoryProducts
+            };
+            if (productVM.Product == null)
             {
                 return NotFound();
             }
 
-            return View(product);
+            return View(productVM);
         }
 
 

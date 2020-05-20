@@ -22,10 +22,13 @@
                         }
                     }
                 </div>
+                <div class="item-prices">
+                    <div class="item-price">@product.Price.ToString("C2")</div>
+                </div>
             </div>
             <div class="item-links">
                 <a asp-action="ProductDetails" asp-controller="Products" asp-route-id="@product.Id" class="btn text-upper btn-md btns-bordered">view</a>
-                <a asp-action="Add" asp-controller="Cart" asp-route-id="@product.Id" data-id="@product.Id" class="btn text-upper btn-md btns-bordered addToCart">Add to cart</a>
+                <a asp-action="Add" asp-controller="Cart" asp-route-id="@product.Id" data-id="@product.Id" class="btn text-upper btn-md text-white addToCart">Add to cart</a>
             </div>
         </div>
     </div>
