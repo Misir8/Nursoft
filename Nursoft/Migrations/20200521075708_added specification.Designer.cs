@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nursoft.DAL;
 
 namespace Nursoft.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200521075708_added specification")]
+    partial class addedspecification
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -633,7 +635,7 @@ namespace Nursoft.Migrations
 
                     b.HasIndex("productId");
 
-                    b.ToTable("Specifications");
+                    b.ToTable("Specification");
                 });
 
             modelBuilder.Entity("Nursoft.Models.Team", b =>

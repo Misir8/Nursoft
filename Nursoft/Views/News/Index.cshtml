@@ -3,6 +3,27 @@
     ViewData["Title"] = "News";
 }
 
+@section styles{
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .page-link {
+            padding: 5px 10px;
+            display: inline-block;
+            border: 2px solid #29abe2;
+            margin: 5px;
+        }
+
+        .active .page-link {
+            background: #29abe2;
+            color: #fff;
+        }
+    </style>
+}
 <section class="with-bg solid-section">
     <div class="theme-back"></div>
     <div class="container page-info">
@@ -17,7 +38,8 @@
                 </li>
                 <li class="path-separator">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                </li><li>Xəbərlər</li>
+                </li>
+                <li>Xəbərlər</li>
             </ul>
         </div>
     </div>
@@ -55,7 +77,7 @@
                 }
             </div>
             <div class="d-flex w-100 justify-content-center">
-              <Pagination page-count="@ViewBag.TotalPages" page-target="/news/index" page-number="@ViewBag.Page" page-range="@ViewBag.PageRange"></Pagination>
+                <Pagination page-count="@ViewBag.TotalPages" page-target="/news/index" page-number="@ViewBag.Page" page-range="@ViewBag.PageRange"></Pagination>
             </div>
         </section>
     </div>

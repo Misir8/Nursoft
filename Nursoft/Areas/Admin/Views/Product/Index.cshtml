@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model ProductCrudViewModel
 
 @{
     ViewBag.Title = "Məhsullar";
@@ -42,7 +42,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach (var product in Model)
+                @foreach (var product in Model.Products)
                 {
                   <tr>
                     <td>@product.Name</td>

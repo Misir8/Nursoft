@@ -62,17 +62,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm-col-6 md-col-4">
-                        <div class="field-group shop-line-field chosen-field">
-                            <label>show</label>
-                            <div class="field-wrap">
-                                <select class="field-control" name="show" selected="selected"><option name="show">4</option><option name="show" value="1" selected="selected">8</option><option name="show" value="2">10</option><option name="show" value="3">20</option></select>
-                                <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
-                                <span class="field-back"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sm-col-12 md-col-4 md-text-right shop-results-text">Showing 9 to 16 of 20 total</div>
                 </div>
             </form>
             <div class="row cols-md rows-md partial">
@@ -89,199 +78,16 @@
         <section class="side-content-section" data-inview-showup="showup-translate-up">
             <h5 class="shift-sm offs-md">Product Category</h5>
             <ul class="categories-list text-medium solid-color">
-                <li class="active">
-                    <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Accessories</span></a> <a class="open-sub-link content-link" href="#"><span class="shown-icon"><i class="fas fa-minus"></i></span><span class="hidden-icon"><i class="fas fa-plus"></i></span></a></span>
-                    <ul class="sub-categories-list">
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Headphones</span></a></span>
-                        </li>
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Audio Splitter</span></a></span>
-                        </li>
-                        <li>
-                            <span class="category-line active"><a class="content-link" href="#"><span class="single-line-text">Power Supply</span></a></span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Components</span></a> <a class="open-sub-link content-link" href="#"><span class="shown-icon"><i class="fas fa-minus"></i></span><span class="hidden-icon"><i class="fas fa-plus"></i></span></a></span>
-                    <ul class="sub-categories-list">
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Category name</span></a></span>
-                        </li>
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Category long name very very very long</span></a></span>
-                        </li>
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Category name</span></a></span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Storage</span></a> <a class="open-sub-link content-link" href="#"><span class="shown-icon"><i class="fas fa-minus"></i></span><span class="hidden-icon"><i class="fas fa-plus"></i></span></a></span>
-                    <ul class="sub-categories-list">
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Category name</span></a></span>
-                        </li>
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Category name</span></a></span>
-                        </li>
-                        <li>
-                            <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Category name</span></a></span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Tablet</span></a></span>
-                </li>
-                <li>
-                    <span class="category-line"><a class="content-link" href="#"><span class="single-line-text">Mouse</span></a></span>
-                </li>
+                @foreach (var category in Model.CategoryProducts)
+                {
+                    <li>
+                        <span class="category-line"><a class="content-link" asp-action="CategoryDetails" asp-route-id="@category.Id"><span class="single-line-text">@category.Name</span></a></span>
+                    </li>
+                }
             </ul>
         </section>
         <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
-        <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Filter products</h5>
-            <form>
-                <div class="field-group">
-                    <label>Price</label>
-                    <div class="slider-wrap" data-ui-range-slider data-min="10" data-max="1000">
-                        <input type="hidden" name="priceFrom" value="40" data-slider-from>
-                        <input type="hidden" name="priceTo" value="160" data-slider-to>
-                        <div class="slider-container theme-slider">
-                            <div class="ui-slider-handle">
-                                <div class="slider-handle-block"></div>
-                            </div>
-                            <div class="ui-slider-handle">
-                                <div class="slider-handle-block"></div>
-                            </div>
-                            <div class="slider-back"></div>
-                        </div>
-                        <div class="slider-text text-right">
-                            Range: $
-                            <span data-slider-from></span> - $
-                            <span data-slider-to></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="field-group">
-                    <label>Manufacturer</label>
-                    <div class="multi-choice" data-ui-range-slider data-min="10" data-max="1000">
-                        <div class="choice">
-                            <label><input type="checkbox" name="manufacturer" value="Acer"><span class="choice-text text-upper">Acer <span class="text-muted">(15)</span></span></label>
-                        </div>
-                        <div class="choice">
-                            <label><input type="checkbox" name="manufacturer" value="Asus"><span class="choice-text text-upper">Asus <span class="text-muted">(7)</span></span></label>
-                        </div>
-                        <div class="choice">
-                            <label><input type="checkbox" name="manufacturer" value="HP"><span class="choice-text text-upper">HP <span class="text-muted">(5)</span></span></label>
-                        </div>
-                        <div class="choice">
-                            <label><input type="checkbox" name="manufacturer" value="Logitech"><span class="choice-text text-upper">Logitech <span class="text-muted">(19)</span></span></label>
-                        </div>
-                        <div class="choice">
-                            <label><input type="checkbox" name="manufacturer" value="A4 Tech"><span class="choice-text text-upper">A4 Tech <span class="text-muted">(12)</span></span></label>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </section>
-        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
-        <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Top Rated Products</h5>
-            <div class="items">
-                <div class="shop-side-item">
-                    <div class="item-side-image">
-                        <a href="shop-item.html" class="item-image responsive-1by1"><img src="images/shop/mouse.jpg" alt=""></a>
-                    </div>
-                    <div class="item-side">
-                        <div class="item-title">
-                            <a href="shop-item.html" class="content-link text-upper">Gamers Mouse</a>
-                        </div>
-                        <div class="item-categories">
-                            <a href="#" class="content-link">mouse</a>
-                        </div>
-                        <div class="item-prices">
-                            <div class="item-price">$45.05</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="shop-side-item">
-                    <div class="item-side-image">
-                        <a href="shop-item.html" class="item-image responsive-1by1"><img src="images/shop/usb-hub.jpg" alt=""></a>
-                    </div>
-                    <div class="item-side">
-                        <div class="item-title">
-                            <a class="item-label-sm item-label-sale item-label" href="#">sale</a>
-                            <a href="shop-item.html" class="content-link text-upper">USB 3.0 HUB</a>
-                        </div>
-                        <div class="item-categories">
-                            <a href="#" class="content-link">accessories</a>
-                        </div>
-                        <div class="item-prices">
-                            <div class="item-price">$67.05</div>
-                            <div class="item-old-price">$102.5</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="shop-side-item">
-                    <div class="item-side-image">
-                        <a href="shop-item.html" class="item-image responsive-1by1"><img src="images/shop/laptop-ac-power-adapter.jpg" alt=""></a>
-                    </div>
-                    <div class="item-side">
-                        <div class="item-title">
-                            <a href="shop-item.html" class="content-link text-upper">Laptop Power Adapter</a>
-                        </div>
-                        <div class="item-categories">
-                            <a href="#" class="content-link">accessories</a>
-                        </div>
-                        <div class="item-prices">
-                            <div class="item-price">$45.05</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
-        <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <div class="block-md muted-bg">
-                <h5 class="text-upper">Free consultation</h5>
-                <p>Get answers and advice from people you want it from.</p>
-                <div class="buttons-block text-right">
-                    <a class="btn btn-md text-upper" href="contact-us.html">contact us</a>
-                </div>
-            </div>
-        </section>
-        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
-        <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Featured Product</h5>
-            <div class="shop-item shop-side-featured">
-                <div class="item-lables">
-                    <a class="item-label-sm item-label-sale item-label" href="#">sale</a>
-                    <a class="item-label-sm item-label-top item-label" href="#">top seller</a>
-                </div>
-                <a href="shop-item.html" class="item-image responsive-1by1"><img src="images/shop/126gb-ssd.jpg" alt=""></a>
-                <div class="item-content shift-md">
-                    <div class="item-textes">
-                        <div class="item-title text-upper">
-                            <a href="shop-item.html" class="content-link">128GB SSD M.2</a>
-                        </div>
-                        <div class="item-categories">
-                            <a href="#" class="content-link">storage</a>
-                        </div>
-                    </div>
-                    <div class="item-prices">
-                        <div class="item-price">$45.05</div>
-                        <div class="item-old-price">$78.5</div>
-                    </div>
-                </div>
-                <div class="item-descripton">This storage compatible only Laptop in M2, new form factor called mini-SATA</div>
-                <div class="item-links">
-                    <a href="shop-item.html" class="btn text-upper btn-sm btns-bordered">view</a>
-                    <a href="#" class="btn text-upper btn-sm"><i class="fas fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;buy</a>
-                </div>
-            </div>
-        </section>
+       
     </aside>
 </div>
 <a href="#" class="scroll-top disabled"><i class="fas fa-angle-up" aria-hidden="true"></i></a>

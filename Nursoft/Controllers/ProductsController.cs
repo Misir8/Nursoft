@@ -21,7 +21,7 @@ namespace Nursoft.Controllers
         // GET
         public IActionResult Index(int p = 1)
         {
-            int pageSize = 6;
+            int pageSize = 8;
             
             var vm = new ProductViewModel
             {
@@ -48,7 +48,8 @@ namespace Nursoft.Controllers
             var vm = new ProductViewModel
             {
                 Products = await _context.Products.ToListAsync(),
-                CategoryProduct = await _context.CategoryProducts.FirstOrDefaultAsync(c => c.Id == id) 
+                CategoryProduct = await _context.CategoryProducts.FirstOrDefaultAsync(c => c.Id == id),
+                CategoryProducts = await _context.CategoryProducts.ToListAsync()
             };
             if (vm.CategoryProduct == null)
             {
@@ -64,12 +65,13 @@ namespace Nursoft.Controllers
             {
                 return NotFound();
             }
-            var product = _context.Products.FirstOrDefault(p => p.Id == id);
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
             var productVM = new ProductViewModel
             {
                 Product = product,
-                CategoryProduct = _context.CategoryProducts.FirstOrDefault(c => c.Id == product.CategoryProductId),
-                CategoryProducts = _context.CategoryProducts
+                CategoryProduct = await _context.CategoryProducts.FirstOrDefaultAsync(c => c.Id == product.CategoryProductId),
+                CategoryProducts = await _context.CategoryProducts.ToListAsync(),
+                Specifications = await _context.Specifications.ToListAsync()
             };
             if (productVM.Product == null)
             {

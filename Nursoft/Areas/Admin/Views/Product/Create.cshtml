@@ -1,8 +1,16 @@
-﻿@model Product
+﻿@model ProductSpecificationViewModel
 
 @{
     ViewBag.Title = "Yeni məhsul";
     Layout = "_Layout";
+}
+@section styles{ 
+    <style>
+        .copy-input{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 }
 
 <!-- Content Header (Page header) -->
@@ -51,6 +59,16 @@
                         <input type="file" required asp-for="Photo" accept="image/png, image/gif, image/jpeg, image/jpg">
                         <span asp-validation-for="Photo"></span>
                     </div>
+                    <div class="form-group">
+                        <label asp-for="NameSpec"></label>
+                        <input asp-for="NameSpec" type="text" class="form-control copy-input" placeholder="">
+                        <div class="container1"></div>
+                        <button class="add_form_field">
+                            Yeni xüsusiyyət &nbsp;
+                            <span style="font-size:16px; font-weight:bold;">+ </span>
+                        </button>
+                        <span asp-validation-for="NameSpec"></span>
+                    </div>
                 </div>
             </div>
             <!-- /.box-body -->
@@ -74,7 +92,19 @@
     <script>
                 CKEDITOR.replace( 'Description', {
                     language: "az"
-                } );
+                });
+
+
+        $(document).ready(function () {
+            var wrapper = $(".container1");
+            var add_button = $(".add_form_field");
+
+            $(add_button).click(function (e) {
+                e.preventDefault();
+                var el = document.querySelector(".copy-input");
+                wrapper.append(el.cloneNode())
+            });
+        });
     </script>
 
 }

@@ -84,14 +84,13 @@
                             <div class="content-text">
                                 <h6>Specification:</h6>
                                 <ul>
-                                    <li>- Item Name: USB Hub Combo</li>
-                                    <li>- USB Ports: 3 Ports</li>
-                                    <li>- Card Reader: Support MS,M2,SD/MMC,TF card</li>
-                                    <li>- Cable: 3.0 for 20cm,2.0 for 40cm</li>
-                                    <li>- Size: 77*45*25mm</li>
-                                    <li>- Date Transfer Rate: Upto 480mbps/5Gmbps</li>
-                                    <li>- Color: White</li>
-                                    <li>- Compatible: Windows XP/2000/Vista/WIN 7/8/10,Mac OS,etc.</li>
+                                    @foreach (var spec in Model.Specifications)
+                                    {
+                                        if (Model.Product.Id == spec.Productİd)
+                                        {
+                                            <li>- @spec.Name</li>
+                                        }
+                                    }
                                 </ul>
                             </div>
                         </div>

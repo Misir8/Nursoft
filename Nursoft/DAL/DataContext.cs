@@ -22,6 +22,7 @@ namespace Nursoft.DAL
         public DbSet<MapContact> MapContacts { get; set; }
         public DbSet<CategoryProduct> CategoryProducts { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Specification> Specifications { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

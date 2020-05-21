@@ -65,7 +65,23 @@
             </div>
         </section>
     </div>
+    <aside class="page-sidebar content-section">
+        <section class="side-content-section" data-inview-showup="showup-translate-up">
+            <h5 class="shift-sm offs-md">Product Category</h5>
+            <ul class="categories-list text-medium solid-color">
+                @foreach (var category in Model.CategoryProducts)
+                {
+                    <li>
+                        <span class="category-line"><a class="content-link" asp-action="CategoryDetails" asp-route-id="@category.Id"><span class="single-line-text">@category.Name</span></a></span>
+                    </li>
+                }
+            </ul>
+        </section>
+        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+
+    </aside>
 </div>
+
 <a href="#" class="scroll-top disabled">
     <i class="fas fa-angle-up" aria-hidden="true"></i>
 </a>

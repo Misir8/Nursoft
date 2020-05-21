@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Nursoft.DAL;
 using Nursoft.Extensions;
 using Nursoft.Models;
+using Nursoft.ViewModels;
 
 namespace Nursoft.Areas.Admin.Controllers
 {
@@ -16,6 +17,7 @@ namespace Nursoft.Areas.Admin.Controllers
     {
         private readonly DataContext _context;
         private readonly IWebHostEnvironment _env;
+        private Product productt;
 
         public ProductController(DataContext context, IWebHostEnvironment env)
         {
@@ -23,9 +25,12 @@ namespace Nursoft.Areas.Admin.Controllers
             _env = env;
         }
         // GET
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var products = _context.Products.ToList();
+            var products = new ProductCrudViewModel
+            {
+                Products = await _context.Products.ToListAsync() 
+            };
             return View(products);
         }
         
@@ -39,36 +44,57 @@ namespace Nursoft.Areas.Admin.Controllers
         //CREATE POST
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(ProductSpecificationViewModel  psVM)
         {
             if (!ModelState.IsValid)
             {
                 ViewBag.Categories = new SelectList(_context.CategoryProducts, "Id", "Name");
-                return View(product);
+                return View(psVM);
             }
 
 
-            if (product.Photo == null)
+            if (psVM.Photo == null)
             {
                 ModelState.AddModelError("error", "Zəhmət olmasa şəkil seçin");
-                return View(product);
+                return View(psVM);
             }
 
-            if (!product.Photo.IsImage())
+            if (!psVM.Photo.IsImage())
             {
                 ModelState.AddModelError("Photo", "Şəkilin formatı jpg, jpeg, png, svg və ya gif formatında olmalıdır");
-                return View(product);
+                return View(psVM);
             }
 
-            if (!product.Photo.IsLarger(5))
+            if (!psVM.Photo.IsLarger(5))
             {
                 ModelState.AddModelError("Photo", "Şəkilin həcmi 5mg-dan çox olmamalıdır");
-                return View(product);
+                return View(psVM);
             }
 
-            product.Image = await product.Photo.SaveFileAsync(_env.WebRootPath, "images/shop/");
-            await _context.Products.AddAsync(product);
+            productt = new Product
+            {
+                Name = psVM.Name,
+                Image = await psVM.Photo.SaveFileAsync(_env.WebRootPath, "images/shop/"),
+                CategoryProductId = psVM.CategoryProductId,
+                Description = psVM.Description,
+                Price = psVM.Price,
+            };
+            
+            
+            await _context.Products.AddAsync(productt);
             await _context.SaveChangesAsync();
+
+            for (int i = 0; i < psVM.NameSpec.Count(); i++)
+            {
+                Specification specification = new Specification
+                {
+                    Name = psVM.NameSpec.ElementAt(i),
+                    Productİd = productt.Id
+                };
+                await _context.Specifications.AddRangeAsync(specification);
+                await _context.SaveChangesAsync();
+            }
+                
             TempData["success"] = "Məhsul uğurla əlavə edildi";
             return RedirectToAction(nameof(Index));
         }
@@ -110,15 +136,27 @@ namespace Nursoft.Areas.Admin.Controllers
         }
         
         //EDIT GET 
-        public IActionResult Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id != null)
             {
-                var product = _context.Products.FirstOrDefault(s => s.Id == id);
-                if (product != null)
+                var prod = await _context.Products.FirstOrDefaultAsync(s => s.Id == id);
+                ProductSpecificationViewModel vm = new ProductSpecificationViewModel
+                {
+                    Product = await _context.Products.FirstOrDefaultAsync(s => s.Id == id),
+                    Specifications = _context.Specifications.Include(x => x.Productİd == id), 
+                    Name = prod.Name,
+                    CategoryProductId = prod.CategoryProductId,
+                    Description = prod.Description,
+                    Photo = prod.Photo,
+                    Price = prod.Price,
+                    Id = prod.Id,
+                    Image = prod.Image
+                };
+                if (vm.Product != null)
                 {
                     ViewBag.Categories = new SelectList(_context.CategoryProducts, "Id", "Name");
-                    return View(product);
+                    return View(vm);
                 }
             }
 
@@ -128,7 +166,7 @@ namespace Nursoft.Areas.Admin.Controllers
         //EDIT POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Product product)
+        public async Task<IActionResult> Edit(ProductSpecificationViewModel product)
         {
             if (!ModelState.IsValid)
             {
