@@ -35,12 +35,12 @@ namespace Nursoft.Extensions
 
             if (string.IsNullOrEmpty(PageFirst))
             {
-                PageFirst = "First";
+                PageFirst = "Əvvəl";
             }
 
             if (string.IsNullOrEmpty(PageLast))
             {
-                PageLast = "Last";
+                PageLast = "Axır";
             }
 
             var content = new StringBuilder();

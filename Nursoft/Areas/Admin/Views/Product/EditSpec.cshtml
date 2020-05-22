@@ -1,0 +1,42 @@
+﻿@model Nursoft.Models.Specification
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Xüsusiyyəti dəyişmək";
+}
+
+<section class="content-header">
+    <h1>
+        Xüsusiyyəti dəyişmək
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="EditSpec" asp-controller="Product" method="post" >
+        <!-- Default box -->
+        <div class="box">
+            <div asp-validation-summary="All" style="color: red"></div>
+            <div class="box-body">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input type="text" class="form-control" asp-for="Name" placeholder="">
+                        <span style="color: red" asp-validation-for="Name"></span>
+                    </div>
+                    <input type="hidden" value="@Model.Productİd" />
+
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a asp-action="Index" asp-controller="Product" class="btn btn-default">Geriyə qayıt</a>
+                <button type="submit" class="btn btn-warning pull-right edit">Dəyiş</button>
+            </div>
+            <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+    </form>
+
+</section>

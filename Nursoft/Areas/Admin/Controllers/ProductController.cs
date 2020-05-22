@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -29,11 +30,11 @@ namespace Nursoft.Areas.Admin.Controllers
         {
             var products = new ProductCrudViewModel
             {
-                Products = await _context.Products.ToListAsync() 
+                Products = await _context.Products.ToListAsync()
             };
             return View(products);
         }
-        
+
         //CREATE GET
         public IActionResult Create()
         {
@@ -44,7 +45,7 @@ namespace Nursoft.Areas.Admin.Controllers
         //CREATE POST
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public async Task<IActionResult> Create(ProductSpecificationViewModel  psVM)
+        public async Task<IActionResult> Create(ProductSpecificationViewModel psVM)
         {
             if (!ModelState.IsValid)
             {
@@ -79,8 +80,8 @@ namespace Nursoft.Areas.Admin.Controllers
                 Description = psVM.Description,
                 Price = psVM.Price,
             };
-            
-            
+
+
             await _context.Products.AddAsync(productt);
             await _context.SaveChangesAsync();
 
@@ -94,11 +95,11 @@ namespace Nursoft.Areas.Admin.Controllers
                 await _context.Specifications.AddRangeAsync(specification);
                 await _context.SaveChangesAsync();
             }
-                
+
             TempData["success"] = "Məhsul uğurla əlavə edildi";
             return RedirectToAction(nameof(Index));
         }
-        
+
         //DELETE GET
         public IActionResult Delete(int? id)
         {
@@ -134,24 +135,25 @@ namespace Nursoft.Areas.Admin.Controllers
 
             return NotFound();
         }
-        
+
         //EDIT GET 
         public async Task<IActionResult> Edit(int? id)
         {
             if (id != null)
             {
                 var prod = await _context.Products.FirstOrDefaultAsync(s => s.Id == id);
+
                 ProductSpecificationViewModel vm = new ProductSpecificationViewModel
                 {
                     Product = await _context.Products.FirstOrDefaultAsync(s => s.Id == id),
-                    Specifications = _context.Specifications.Include(x => x.Productİd == id), 
+                    Specifications = _context.Specifications.Include(x => x.Productİd == id),
                     Name = prod.Name,
                     CategoryProductId = prod.CategoryProductId,
                     Description = prod.Description,
                     Photo = prod.Photo,
                     Price = prod.Price,
                     Id = prod.Id,
-                    Image = prod.Image
+                    Image = prod.Image,
                 };
                 if (vm.Product != null)
                 {
@@ -162,7 +164,7 @@ namespace Nursoft.Areas.Admin.Controllers
 
             return NotFound();
         }
-        
+
         //EDIT POST
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -173,7 +175,7 @@ namespace Nursoft.Areas.Admin.Controllers
                 ViewBag.Categories = new SelectList(_context.CategoryProducts, "Id", "Name");
                 return View(product);
             }
-            
+
             var productDb = await _context.Products.FindAsync(product.Id);
             if (product.Photo != null)
             {
@@ -201,8 +203,104 @@ namespace Nursoft.Areas.Admin.Controllers
             productDb.CategoryProductId = product.CategoryProductId;
             productDb.Price = product.Price;
             await _context.SaveChangesAsync();
+
+
+
             TempData["warning"] = "Məhsul uğurla dəyişdirildi";
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Specification(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            SpecificationViewModelCRUD vm = new SpecificationViewModelCRUD
+            {
+                Specifications = await _context.Specifications.Where(x => x.Productİd == id).ToListAsync(),
+                Product = product
+            };
+
+            return View(vm);
+        }
+        [HttpPost]
+        public IActionResult SpecCreate(SpecificationViewModelCRUD vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+
+            Specification specification = new Specification
+            {
+                Name = vm.Name,
+                Productİd = vm.ProductId
+            };
+             _context.Specifications.Add(specification);
+             _context.SaveChanges();
+            TempData["success"] = "Xüsusiyyət uğurla əlavə edildi";
+            return RedirectToAction(nameof(Specification), new { id = vm.ProductId });
+        }
+
+        
+        public async Task<IActionResult> DeleteSpec(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var spec = await _context.Specifications.FirstOrDefaultAsync(s => s.Id == id);
+            var myId = spec.Productİd;
+            if (spec == null)
+            {
+                return NotFound();
+            }
+            _context.Specifications.Remove(spec);
+            await _context.SaveChangesAsync();
+            TempData["danger"] = "Xüsusiyyət uğurla silindi";
+            return RedirectToAction(nameof(Specification), new { id = myId });
+        }
+
+        public async Task<IActionResult> EditSpec(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var spec = await _context.Specifications.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (spec == null)
+            {
+                return NotFound();
+            }
+
+            return View(spec);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditSpec(Specification specification)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(specification);
+            }
+
+            var specDb = await _context.Specifications.FirstOrDefaultAsync(x => x.Id == specification.Id);
+            specDb.Name = specification.Name;
+            await _context.SaveChangesAsync();
+
+
+
+            TempData["warning"] = "Xüsusiyyət uğurla dəyişdirildi";
+            return RedirectToAction(nameof(Specification), new { id = specDb.Productİd });
+
         }
     }
 }

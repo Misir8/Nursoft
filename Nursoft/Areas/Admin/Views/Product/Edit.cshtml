@@ -5,6 +5,16 @@
     Layout = "_Layout";
 }
 
+@section styles{
+    <style>
+        .copy-input {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+}
+
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -52,7 +62,14 @@
                         <textarea type="text" class="form-control" asp-for="Description" placeholder=""></textarea>
                         <span style="color: red" asp-validation-for="Description"></span>
                     </div>
-
+                    
+                    <div class="form-group">
+                        <a class="btn btn-primary" asp-action="Specification" asp-route-id="@Model.Id">
+                            Xüsusiyyətləri dəyiş &nbsp;
+                            <span style="font-size:16px; font-weight:bold;">+ </span>
+                        </a>
+                    </div>
+	                
 
                 </div>
             </div>
@@ -71,17 +88,15 @@
 
 @section script
 {
-    <partial name="_ValidationPartial"/>
+    <partial name="_ValidationPartial" />
 
     <script src="~/ckeditor/ckeditor.js"></script>
     <script>
 
-    CKEDITOR.replace( 'Description', {
-    language: "az"
-    } );
-   
-    
-     
+        CKEDITOR.replace('Description', {
+            language: "az"
+        });
+
     </script>
 
 

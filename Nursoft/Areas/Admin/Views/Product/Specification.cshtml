@@ -1,0 +1,66 @@
+﻿@model SpecificationViewModelCRUD
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Xüsusiyyətlər";
+}
+
+<section class="content-header">
+    <h1>
+        Xüsusiyyətlər
+    </h1>
+    <ol class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a></li>
+        <li class="active">MəXüsusiyyətlər</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+            <partial name="_SuccessMessagePartial" />
+            <partial name="_DangerMessagePartial" />
+            <partial name="_WarningMessagePartial" />
+            
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Hərəkətlər</th>
+                        <th style="display: none"></th>
+                        <th style="display: none"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var specification in Model.Specifications)
+                    {
+                        <tr>
+                            <td>@specification.Name</td>
+                            <td>
+                                <a asp-action="EditSpec" asp-route-id="@specification.Id" class="fa fa-pencil"></a>
+                                <a asp-action="DeleteSpec" asp-route-id="@specification.Id" class="fa fa-remove"></a>
+                            </td>
+                            <td style="display: none"></td>
+                            <td style="display: none"></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <form asp-action="SpecCreate" method="post">
+                <div class="form-group">
+                    <input type="hidden" asp-for="ProductId" value="@Model.Product.Id"/>
+                    <input type="text" class="form-control" asp-for="Name" />
+                    <input type="submit" class="btn btn-success" value="Yeni xüsusiyyət" style="margin-top: 20px;">
+                </div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</section>
+<!-- /.content -->
