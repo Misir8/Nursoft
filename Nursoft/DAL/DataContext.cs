@@ -23,6 +23,7 @@ namespace Nursoft.DAL
         public DbSet<CategoryProduct> CategoryProducts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Specification> Specifications { get; set; }
+        public DbSet<Counter> Counters { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -109,24 +110,21 @@ namespace Nursoft.DAL
                     Id = 1,
                     Name = "Michale John",
                     Description = "Thanks John, I was really pleased with Profix’s service. Would definitely recommend you and have alredy given out some of your business cards that were left with me. All the best for future succes.",
-                    Position = "Co-Founder, InfoLabs",
-                    Image = "notebook-sm.png"
+                    Position = "Co-Founder, InfoLabs"
                 },
                 new Testimonial
                 {
                     Id = 2,
                     Name = "Merry Smith",
                     Description = "Profix did great job with fixing my laptop for a good price. I recommend any body with laptop problems, they will give you excellent service to all his customers.",
-                    Position = "CFO, InfoTech",
-                    Image = "computer-sm.png"
+                    Position = "CFO, InfoTech"
                 },
                 new Testimonial
                 {
                     Id = 3,
                     Name = "Merry Doe",
                     Description = "Keep up the excellent work. Thank you so much for your help. This is simply unbelievable!",
-                    Position = "CFO, InfoTech",
-                    Image = "mobile-sm.png"
+                    Position = "CFO, InfoTech"
                 }
             );
 
@@ -176,6 +174,10 @@ namespace Nursoft.DAL
                 new Product{Id = 5, Name = "CABLE ORGANIZER", CategoryProductId = 2, Image = "cable-organizer.jpg", Description = "13.7 inch USB extension cable extension perfect for travel USB hub / Adds 4 USB 3.0 ports to your computer / Backward compatible with USB 2.0 and 1.1 specifications Ready Out-of-Box"},
                 new Product{Id = 6, Name = "128GB SSD M.2", CategoryProductId = 4, Image = "126gb-ssd.jpg", Description = "13.7 inch USB extension cable extension perfect for travel USB hub / Adds 4 USB 3.0 ports to your computer / Backward compatible with USB 2.0 and 1.1 specifications Ready Out-of-Box"}
 
+            );
+
+            modelBuilder.Entity<Counter>().HasData(
+                new Counter { Id = 1, Client = 3720, Project = 4170, Computer = 2730 }
             );
         }
     }

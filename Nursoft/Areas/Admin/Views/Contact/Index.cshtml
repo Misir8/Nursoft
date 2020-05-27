@@ -42,7 +42,7 @@
                 {
                   <tr>
                     <td>@contact.Name</td>
-                    <td >@contact.Email</td>
+                    <td ><a href="mailto:@contact.Email">@contact.Email</a></td>
                     <td >@contact.Message</td>
                     <td>
                       <a asp-action="Delete" asp-controller="Contact" asp-route-id="@contact.Id" class="fa fa-remove"></a>

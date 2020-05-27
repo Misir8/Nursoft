@@ -118,28 +118,22 @@
 <section class="main-bg decorated-bg text-center tight solid-section">
     <div class="container">
         <div class="row cols-md rows-xl" data-inview-showup="showup-translate-up">
-            <div class="sm-col-3">
+            <div class="sm-col-4">
                 <div class="counter">
-                    <div class="counter-title text-upper">Happy client</div>
-                    <div class="counter-value" data-waypoint-counter="3720">3720</div>
+                    <div class="counter-title text-upper">Razı müştərilər</div>
+                    <div class="counter-value" data-waypoint-counter="@Model.Counters.ElementAt(0).Client">@Model.Counters.ElementAt(0).Client</div>
                 </div>
             </div>
-            <div class="sm-col-3">
+            <div class="sm-col-4">
                 <div class="counter">
-                    <div class="counter-title text-upper">Finished projects</div>
-                    <div class="counter-value" data-waypoint-counter="4170">4170</div>
+                    <div class="counter-title text-upper">Görülən işlər</div>
+                    <div class="counter-value" data-waypoint-counter="@Model.Counters.ElementAt(0).Project">@Model.Counters.ElementAt(0).Project</div>
                 </div>
             </div>
-            <div class="sm-col-3">
+            <div class="sm-col-4">
                 <div class="counter">
-                    <div class="counter-title text-upper">Computer serviced</div>
-                    <div class="counter-value" data-waypoint-counter="2730">2730</div>
-                </div>
-            </div>
-            <div class="sm-col-3">
-                <div class="counter">
-                    <div class="counter-title text-upper">Mobile serviced</div>
-                    <div class="counter-value" data-waypoint-counter="1510">1510</div>
+                    <div class="counter-title text-upper">Təmir olan komputerlər</div>
+                    <div class="counter-value" data-waypoint-counter="@Model.Counters.ElementAt(0).Computer">@Model.Counters.ElementAt(0).Computer</div>
                 </div>
             </div>
         </div>
@@ -148,7 +142,7 @@
 <section class="content-section">
     <div class="container">
         <div class="section-head text-center container-md">
-            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">İnsanlar nə deyir</h2>
+            <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">MÜŞTƏRİLƏR NƏ DEYİR</h2>
             <p data-inview-showup="showup-translate-left">Real müştərilərin rəyi</p>
         </div>
         <div class="owl-carousel" data-inview-showup="showup-translate-up" data-owl-dots="true">
@@ -159,9 +153,6 @@
                         <div class="tt-content">
                             <div class="tt-quote">&#8220;</div>
                             @testimonial.Description
-                        </div>
-                        <div class="tt-icon">
-                            <img src="~/images/icons/@testimonial.Image" alt="">
                         </div>
                         <div class="pexx-tt-user-title">@testimonial.Name</div>
                         <div class="pexx-tt-user-subtitle">@testimonial.Position</div>

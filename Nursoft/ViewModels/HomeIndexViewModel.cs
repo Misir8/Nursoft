@@ -10,5 +10,6 @@ namespace Nursoft.ViewModels
         public IEnumerable<Feature> Features { get; set; }
         public IEnumerable<Models.Service> Services { get; set; }
         public IEnumerable<Testimonial> Testimonials { get; set; }
+        public IEnumerable<Counter> Counters { get; set; }
     }
 }

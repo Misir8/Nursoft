@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Counter>
+
+@{
+    ViewBag.Title = "Layihələrin sayı";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Layihələrin sayı
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a>
+        </li>
+        <li class="active">Layihələrin sayı</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+
+        <!-- /.box-header -->
+        <div class="box-body">
+            <partial name="_WarningMessagePartial" />
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Razı müştərilər	</th>
+                        <th>Hazır işlər</th>
+                        <th>Təmir olunan komputerlər</th>
+                        <th>Hərəkətlər</th>
+                        <th style="display: none"></th>
+                        <th style="display: none"></th>
+                        <th style="display: none"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var counter in Model)
+                    {
+                    <tr>
+                        <td>
+                            @counter.Client
+                        </td>
+                        <td>@counter.Project</td>
+                        <td>@counter.Computer</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="Counter" asp-route-id="@counter.Id" class="fa fa-pencil"></a>
+                        </td>
+
+                        <td style="display: none"></td>
+                        <td style="display: none"></td>
+                        <td style="display: none"></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</section>
+<!-- /.content -->

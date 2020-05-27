@@ -104,7 +104,7 @@ namespace Nursoft.Controllers
                     // проверяем, подтвержден ли email
                     if (!await _userManager.IsEmailConfirmedAsync(user))
                     {
-                        ModelState.AddModelError(string.Empty, "Вы не подтвердили свой email");
+                        ModelState.AddModelError(string.Empty, "Siz emailinizi təstiq etməmisiniz");
                         return View(model);
                     }
                 }
@@ -117,7 +117,7 @@ namespace Nursoft.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Неправильный логин и (или) пароль");
+                    ModelState.AddModelError("", "Login və ya parol səhvdir");
                 }
             }
 
@@ -159,7 +159,7 @@ namespace Nursoft.Controllers
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
                 EmailService emailService = new EmailService();
                 await emailService.SendEmailAsync(model.Email, "Reset Password",
-                    $"Для сброса пароля пройдите по ссылке: <a href='{callbackUrl}'>link</a>");
+                    $"Parolu yeniləmək üçün linkə keçid edin: <a href='{callbackUrl}'>link</a>");
                 return View("ForgotPasswordConfirmation");
             }
             return View(model);

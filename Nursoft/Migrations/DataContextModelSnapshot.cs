@@ -278,6 +278,36 @@ namespace Nursoft.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Nursoft.Models.Counter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Client")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Computer")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Project")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Counters");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Client = 3720,
+                            Computer = 2730,
+                            Project = 4170
+                        });
+                });
+
             modelBuilder.Entity("Nursoft.Models.Feature", b =>
                 {
                     b.Property<int>("Id")
@@ -623,15 +653,15 @@ namespace Nursoft.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Productİd")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("productId")
+                    b.Property<int>("Productİd")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("productId");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Specifications");
                 });
@@ -696,9 +726,6 @@ namespace Nursoft.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasMaxLength(5000);
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
@@ -718,7 +745,6 @@ namespace Nursoft.Migrations
                         {
                             Id = 1,
                             Description = "Thanks John, I was really pleased with Profix’s service. Would definitely recommend you and have alredy given out some of your business cards that were left with me. All the best for future succes.",
-                            Image = "notebook-sm.png",
                             Name = "Michale John",
                             Position = "Co-Founder, InfoLabs"
                         },
@@ -726,7 +752,6 @@ namespace Nursoft.Migrations
                         {
                             Id = 2,
                             Description = "Profix did great job with fixing my laptop for a good price. I recommend any body with laptop problems, they will give you excellent service to all his customers.",
-                            Image = "computer-sm.png",
                             Name = "Merry Smith",
                             Position = "CFO, InfoTech"
                         },
@@ -734,7 +759,6 @@ namespace Nursoft.Migrations
                         {
                             Id = 3,
                             Description = "Keep up the excellent work. Thank you so much for your help. This is simply unbelievable!",
-                            Image = "mobile-sm.png",
                             Name = "Merry Doe",
                             Position = "CFO, InfoTech"
                         });
@@ -867,9 +891,9 @@ namespace Nursoft.Migrations
 
             modelBuilder.Entity("Nursoft.Models.Specification", b =>
                 {
-                    b.HasOne("Nursoft.Models.Product", "product")
+                    b.HasOne("Nursoft.Models.Product", "Product")
                         .WithMany("Specifications")
-                        .HasForeignKey("productId");
+                        .HasForeignKey("ProductId");
                 });
 #pragma warning restore 612, 618
         }

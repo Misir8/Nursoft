@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Nursoft.DAL;
 using Nursoft.Models;
@@ -7,6 +8,7 @@ using Nursoft.Models;
 namespace Nursoft.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "admin")]
     public class ContactUsController : Controller
     {
         private readonly DataContext _context;

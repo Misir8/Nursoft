@@ -30,7 +30,8 @@ namespace Nursoft.Controllers
                 Sliders = await _context.Sliders.ToListAsync(),
                 Features = await _context.Features.ToListAsync(),
                 Services = await _context.Services.Take(6).ToListAsync(),
-                Testimonials = await _context.Testimonials.ToListAsync()
+                Testimonials = await _context.Testimonials.ToListAsync(),
+                Counters = await _context.Counters.ToListAsync()
             };
             return View(vm);
         }

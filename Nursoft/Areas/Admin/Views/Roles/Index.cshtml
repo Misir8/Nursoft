@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Rollar";
+}
+<section class="content-header">
+    <h1>
+         Rollar
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a>
+        </li>
+        <li class="active">Rollar</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+
+        <!-- /.box-header -->
+        <div class="box-body">
+            <h2>Rolların siyahısı</h2>
+            <table id="example1" class="table table-bordered table-striped">
+                @foreach (var role in Model)
+                {
+                    <tr>
+                        <td>@role.Name</td>
+                        <td>
+                            <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    Sil
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+            <a asp-action="Create" class="btn btn-success">Rol əlavə et</a>
+            <a asp-action="UserList" class="btn btn-primary">İstifadəçilərin siyahısı</a>
+            </div>
+</div>
+</section>

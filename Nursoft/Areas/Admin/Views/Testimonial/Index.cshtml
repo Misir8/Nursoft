@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Nursoft.Models.Testimonial>
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Rəylər";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Xəbərlər
+    </h1>
+    <ol class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a></li>
+        <li class="active">Rəylər</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+            <partial name="_SuccessMessagePartial" />
+            <partial name="_DangerMessagePartial" />
+            <partial name="_WarningMessagePartial" />
+            <div class="form-group">
+                <a asp-controller="Testimonial" asp-action="Create" class="btn btn-success">Yeni rəy əlavə et</a>
+            </div>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Rəy</th>
+                        <th>Vəzifə</th>
+                        <th style="display: none"></th>
+                        <th style="display: none"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var testimonial in Model)
+                    {
+                        <tr>
+                            <td>@testimonial.Name</td>
+                            <td>@testimonial.Description</td>
+                            <td>
+                                @testimonial.Position
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-controller="Testimonial" asp-route-id="@testimonial.Id" class="fa fa-pencil"></a>
+                                <a asp-action="Delete" asp-controller="Testimonial" asp-route-id="@testimonial.Id" class="fa fa-remove"></a>
+                            </td>
+                            <td style="display: none"></td>
+                            <td style="display: none"></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+</section>
+<!-- /.content -->

@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model ChangeRoleViewModel
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "İstifadəçinin rolun dəyişdirmək";
+}
+
+
+
+
+
+<section class="content-header">
+    <ol class="breadcrumb">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a>
+        </li>
+        <li class="active">İstifadəçinin rolun dəyişdirmək</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+
+        <!-- /.box-header -->
+        <div class="box-body">
+            <h2>@Model.UserEmail istifadçinin rolun dəyişdirmək</h2>
+
+            <form asp-action="Edit" method="post">
+                <input type="hidden" name="userId" value="@Model.UserId" />
+                <div class="form-group">
+                    @foreach (IdentityRole role in Model.AllRoles)
+                    {
+                        <input type="checkbox" name="roles" value="@role.Name"
+                               @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />@role.Name <br />
+                        }
+                </div>
+                <button type="submit" class="btn btn-primary">Əlavə et</button>
+            </form>
+        </div>
+    </div>
+</section>

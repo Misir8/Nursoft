@@ -432,3 +432,13 @@ C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Nursoft.M
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Nursoft.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Specification.cshtml.g.cs
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\EditSpec.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Roles\Index.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Roles\Create.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Roles\Edit.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Roles\UserList.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Counter\Index.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Counter\Edit.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Index.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Create.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Delete.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Edit.cshtml.g.cs

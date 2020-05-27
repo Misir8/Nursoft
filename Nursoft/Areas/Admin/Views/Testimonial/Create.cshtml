@@ -1,0 +1,56 @@
+﻿@model Testimonial
+
+@{
+    ViewBag.Title = "Yeni rəy";
+    Layout = "_Layout";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Yeni rəy
+    </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <form asp-action="Create" asp-controller="Testimonial" enctype="multipart/form-data">
+        <!-- Default box -->
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Yeni rəyin əlavə edilməsi</h3>
+            </div>
+
+            <div style="color: red" asp-validation-summary="All"></div>
+            <div class="box-body">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" type="text" class="form-control" placeholder="">
+                        <span style="color: red" asp-validation-for="Name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description"></label>
+                        <input asp-for="Description" type="text" class="form-control" placeholder="">
+                        <span style="color: red" asp-validation-for="Description"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Position"></label>
+                        <input asp-for="Position" type="text" class="form-control" placeholder="">
+                        <span style="color: red" asp-validation-for="Position"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a asp-controller="Testimonial" asp-action="Index" class="btn btn-default">Geriyə qayıt</a>
+                <input type="submit" class="btn btn-success pull-right" value="Əlavə et">
+            </div>
+            <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+    </form>
+
+</section>
+<!-- /.content -->

@@ -1,0 +1,39 @@
+﻿@model string
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Yeni rol";
+}
+
+
+
+
+
+<section class="content-header">
+    <ol class="breadcrumb">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard"></i> Əsas</a>
+        </li>
+        <li class="active">Yeni rol</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <!-- Default box -->
+    <div class="box">
+
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <form asp-action="Create" method="post">
+                <div class="form-group">
+                    <label for="name">Yeni rol</label>
+                    <input name="name" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Əlavə et</button>
+            </form>
+        </div>
+    </div>
+</section>

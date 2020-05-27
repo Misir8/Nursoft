@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Nursoft.DAL;
@@ -9,6 +10,7 @@ using Nursoft.Models;
 namespace Nursoft.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "admin")]
     public class ProductCategoryController : Controller
     {
         private readonly DataContext _context;
