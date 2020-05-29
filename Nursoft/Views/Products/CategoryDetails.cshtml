@@ -55,8 +55,8 @@
                                     </div>
                                 </div>
                                 <div class="item-links">
-                                    <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@product.Id" class="btn text-upper btn-md btns-bordered">view</a>
-                                    <a asp-action="Add" asp-controller="Cart" asp-route-id="@product.Id" data-id="@product.Id" class="btn text-upper btn-md addToCart">Add to cart</a>
+                                    <a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@product.Id" class="btn text-upper btn-md btns-bordered">Ətraflı</a>
+                                    <a asp-action="Add" asp-controller="Cart" asp-route-id="@product.Id" data-id="@product.Id" class="btn text-upper btn-md addToCart">Səbətə əlavə et</a>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
     </div>
     <aside class="page-sidebar content-section">
         <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Product Category</h5>
+            <h5 class="shift-sm offs-md">Məhsul kateqoriyaları</h5>
             <ul class="categories-list text-medium solid-color">
                 @foreach (var category in Model.CategoryProducts)
                 {

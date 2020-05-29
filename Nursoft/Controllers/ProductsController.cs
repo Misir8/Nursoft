@@ -109,6 +109,19 @@ namespace Nursoft.Controllers
                     };
                     return PartialView("_GetProductPartial", vmDD);
             }
+            
+        }
+        public async Task<IActionResult> CategoryProduct(int? depId )
+        {
+            if (depId == null)
+            {
+               return RedirectToAction("Index");
+            }
+
+            var ct = await _context.CategoryProducts.ToListAsync();
+            var cat = await _context.CategoryProducts.FirstOrDefaultAsync(x => x.Id == depId);
+            var products = await _context.Products.Where(x => x.CategoryProductId == cat.Id).ToListAsync();
+            return PartialView("_GetProductCategoryPartial", new ProductViewModel{CategoryProduct = cat, Products = products, CategoryProducts = ct});
         }
     }
 }

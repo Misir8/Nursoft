@@ -20,46 +20,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2e0c6de-44ad-4fe5-9d22-83bdde507113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Account/ConfirmPassword.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductCategoryPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Nursoft/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Nursoft/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Nursoft/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Nursoft/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Nursoft/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/About/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Models/About.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Models/About.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Nursoft.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Nursoft.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/About/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Account/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Account/Register.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Views/Account/ResetPassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Account/ResetPassword.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Account/ResetPasswordConfirmation.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Account/ResetPasswordConfirmation.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Cart/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Cart/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Cart/_PaypalParthial.cshtml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Views/Contact/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Contact/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Products/CategoryDetails.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/Nursoft.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.RazorCoreGenerate.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Nursoft.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/About/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/About/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/About/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/About/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/ResetPassword.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/ResetPassword.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/ResetPasswordConfirmation.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Account/ResetPasswordConfirmation.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Cart/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Cart/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Cart/_PaypalParthial.cshtml.g.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Contact/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Contact/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/CategoryDetails.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/CategoryDetails.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/ProductDetails.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/ProductDetails.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/_GetProductPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Products/_GetProductPartial.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/Nursoft.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nursoft/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Nursoft/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nursoft/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +117,7 @@
     <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Nursoft/Views/Products/_GetProductCategoryPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/ContactUs/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Nursoft/Areas/Admin/Views/MapContact/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -188,11 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Product/Index.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Views/Products/ProductDetails.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Product/Delete.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Service/Edit.cshtml" />
-        <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Controllers/ProductController.cs" />
         <option value="$PROJECT_DIR$/Nursoft/Models/CategoryProduct.cs" />
         <option value="$PROJECT_DIR$/Nursoft/Models/Product.cs" />
         <option value="$PROJECT_DIR$/Nursoft/Areas/Admin/Views/Product/Create.cshtml" />
@@ -239,6 +244,11 @@
         <option value="$PROJECT_DIR$/Nursoft/Views/Account/ForgotPassword.cshtml" />
         <option value="$PROJECT_DIR$/Nursoft/Views/Account/ConfirmPassword.cshtml" />
         <option value="$PROJECT_DIR$/Nursoft/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/ViewModels/ProductViewModel.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductPartial.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/Products/_GetProductCategoryPartial.cshtml" />
+        <option value="$PROJECT_DIR$/Nursoft/Controllers/ProductsController.cs" />
+        <option value="$PROJECT_DIR$/Nursoft/Views/Products/Index.cshtml" />
       </list>
     </option>
   </component>
@@ -374,6 +384,7 @@
       <workItem from="1589187289161" duration="634000" />
       <workItem from="1589188054753" duration="50000" />
       <workItem from="1589268639455" duration="2396000" />
+      <workItem from="1590653267103" duration="14477000" />
     </task>
     <servers />
   </component>
@@ -413,25 +424,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="433" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1585237855189" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1589274061538">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1590672070264">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589274061538" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590672070264" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586602237899" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1589274061537">
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1590672070264">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1589274061537" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1590672070264" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586602237899" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1589274061537">
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1590672070264">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1589274061537" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1590672070264" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586602237898" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1589274061538">
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1590672070264">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1589274061538" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1590672070264" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586602237899" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1585240688971">
       <screen x="0" y="0" width="1920" height="1040" />

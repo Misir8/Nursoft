@@ -13,15 +13,18 @@
               <e p="AboutController.cs" t="Include" />
               <e p="ContactController.cs" t="Include" />
               <e p="ContactUsController.cs" t="Include" />
+              <e p="CounterController.cs" t="Include" />
               <e p="FeatureController.cs" t="Include" />
               <e p="HomeController.cs" t="Include" />
               <e p="MapContactController.cs" t="Include" />
               <e p="NewsController.cs" t="Include" />
               <e p="ProductCategoryController.cs" t="Include" />
               <e p="ProductController.cs" t="Include" />
+              <e p="RolesController.cs" t="Include" />
               <e p="ServiceController.cs" t="Include" />
               <e p="SliderController.cs" t="Include" />
               <e p="TeamController.cs" t="Include" />
+              <e p="TestimonialController.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
               <e p="_ViewImports.cshtml" t="Include" />
@@ -35,6 +38,10 @@
                 <e p="Index.cshtml" t="Include" />
               </e>
               <e p="ContactUs" t="Include">
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Counter" t="Include">
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
               </e>
@@ -59,13 +66,21 @@
                 <e p="Create.cshtml" t="Include" />
                 <e p="Delete.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
+                <e p="EditSpec.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
+                <e p="Specification.cshtml" t="Include" />
               </e>
               <e p="ProductCategory" t="Include">
                 <e p="Create.cshtml" t="Include" />
                 <e p="Delete.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Roles" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+                <e p="UserList.cshtml" t="Include" />
               </e>
               <e p="service" t="Include">
                 <e p="Create.cshtml" t="Include" />
@@ -92,6 +107,12 @@
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
               </e>
+              <e p="Testimonial" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -99,6 +120,7 @@
         <e p="Controllers" t="Include">
           <e p="AboutController.cs" t="Include" />
           <e p="AccountController.cs" t="Include" />
+          <e p="CartController.cs" t="Include" />
           <e p="ContactController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="NewsController.cs" t="Include" />
@@ -111,6 +133,7 @@
         <e p="Extensions" t="Include">
           <e p="IFormFileExtension.cs" t="Include" />
           <e p="PaginationTagHelper.cs" t="Include" />
+          <e p="SessionExtensions.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20200224105653_Initial Create.cs" t="Include" />
@@ -141,13 +164,27 @@
           <e p="20200324121621_Product.Designer.cs" t="Include" />
           <e p="20200409162357_Identity.cs" t="Include" />
           <e p="20200409162357_Identity.Designer.cs" t="Include" />
+          <e p="20200518065500_added price in product table.cs" t="Include" />
+          <e p="20200518065500_added price in product table.Designer.cs" t="Include" />
+          <e p="20200518071331_change price type.cs" t="Include" />
+          <e p="20200518071331_change price type.Designer.cs" t="Include" />
+          <e p="20200521075708_added specification.cs" t="Include" />
+          <e p="20200521075708_added specification.Designer.cs" t="Include" />
+          <e p="20200521075839_change specification.cs" t="Include" />
+          <e p="20200521075839_change specification.Designer.cs" t="Include" />
+          <e p="20200527064101_added counter.cs" t="Include" />
+          <e p="20200527064101_added counter.Designer.cs" t="Include" />
+          <e p="20200527102044_delete image in testimonial.cs" t="Include" />
+          <e p="20200527102044_delete image in testimonial.Designer.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="About.cs" t="Include" />
+          <e p="CartItem.cs" t="Include" />
           <e p="CategoryProduct.cs" t="Include" />
           <e p="Contact.cs" t="Include" />
           <e p="ContactUs.cs" t="Include" />
+          <e p="Counter.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Feature.cs" t="Include" />
           <e p="MapContact.cs" t="Include" />
@@ -156,6 +193,7 @@
           <e p="Repair.cs" t="Include" />
           <e p="Service.cs" t="Include" />
           <e p="Slider.cs" t="Include" />
+          <e p="Specification.cs" t="Include" />
           <e p="Team.cs" t="Include" />
           <e p="Testimonial.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -174,6 +212,11 @@
           <e p="launchSettings.json" t="Include" />
           <e p="PublishProfiles" t="Include">
             <e p="FolderProfile.pubxml" t="Include" />
+            <e p="FolderProfile1.pubxml" t="Include" />
+            <e p="FolderProfile2.pubxml" t="Include" />
+            <e p="FolderProfile3.pubxml" t="Include" />
+            <e p="FolderProfile4.pubxml" t="Include" />
+            <e p="FolderProfile5.pubxml" t="Include" />
           </e>
         </e>
         <e p="service" t="Include">
@@ -184,16 +227,23 @@
           <e p="AddressViewComponent.cs" t="Include" />
           <e p="EmailViewComponent.cs" t="Include" />
           <e p="PhoneViewComponent.cs" t="Include" />
+          <e p="SmallCartViewComponent.cs" t="Include" />
         </e>
         <e p="ViewModels" t="Include">
           <e p="AboutViewModel.cs" t="Include" />
+          <e p="CartViewModel.cs" t="Include" />
+          <e p="ChangeRoleViewModel.cs" t="Include" />
           <e p="ForgotPasswordViewModel.cs" t="Include" />
           <e p="HomeIndexViewModel.cs" t="Include" />
           <e p="LoginViewModel.cs" t="Include" />
+          <e p="ProductCrudViewModel.cs" t="Include" />
+          <e p="ProductSpecificationViewModel.cs" t="Include" />
           <e p="ProductViewModel.cs" t="Include" />
           <e p="RegisterViewModel.cs" t="Include" />
           <e p="ResetPasswordViewModel.cs" t="Include" />
           <e p="ServiceViewModel.cs" t="Include" />
+          <e p="SmallCartViewModel.cs" t="Include" />
+          <e p="SpecificationViewModelCRUD.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
@@ -210,6 +260,9 @@
             <e p="ResetPassword.cshtml" t="Include" />
             <e p="ResetPasswordConfirmation.cshtml" t="Include" />
           </e>
+          <e p="Cart" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
           <e p="Contact" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
@@ -222,6 +275,7 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Products" t="Include">
+            <e p="_GetProductCategoryPartial.cshtml" t="Include" />
             <e p="_GetProductPartial.cshtml" t="Include" />
             <e p="CategoryDetails.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
@@ -1255,7 +1309,9 @@
               <e p="pattern.png" t="Include" />
             </e>
             <e p="service" t="Include">
+              <e p="01a8e462-1071-4729-997f-c43178c4c619cpu-upgrade.jpg" t="Include" />
               <e p="01b1e40c-7d28-4d02-a5fa-c2bbc48e8cafshortcodes.png" t="Include" />
+              <e p="783f1b4a-d2d3-4fc7-9cdc-6045b1137401item-3.jpg" t="Include" />
               <e p="a6da768f-d0e3-40f8-9449-ec145137f30837d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="c5f8d68b-d445-4956-bb45-53b869aca03637d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="cpu-upgrade.jpg" t="Include" />
@@ -1270,7 +1326,6 @@
               <e p="item-5.jpg" t="Include" />
               <e p="item-6.jpg" t="Include" />
               <e p="logo.png" t="Include" />
-              <e p="motherboard-1.jpg" t="Include" />
               <e p="motherboard-3.jpg" t="Include" />
               <e p="nursoft.png" t="Include" />
               <e p="service.jpg" t="Include" />
@@ -1281,8 +1336,24 @@
             <e p="shop" t="Include">
               <e p="06583275-f911-4767-8bce-1c24dbab6cd337d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="126gb-ssd.jpg" t="Include" />
+              <e p="1669e596-d130-4c41-8b96-18f1702c89bcgame-console.jpg" t="Include" />
+              <e p="461a9864-8a5d-4443-a36e-7956e9e96d0ea6da768f-d0e3-40f8-9449-ec145137f30837d598e5a04344da81c76621ba273915.jpg" t="Include" />
+              <e p="4fce1bf3-c52c-431b-b5c0-87d763e892b8d11369e6-8a19-4225-8106-7e783c6f4a31top-header.png" t="Include" />
               <e p="537cb77b-2b1e-4ceb-9c31-135ef75d6f60e15df24d-5ed0-4650-af01-1b86470c72181.jpg" t="Include" />
+              <e p="59908052-689c-490d-bc9a-7b1f22968b6cemblemnur.png" t="Include" />
+              <e p="6191628c-f036-4b72-b234-a858f4a4bfe5emblemnur.png" t="Include" />
+              <e p="6e1d40fe-c2e1-4a29-b522-cbfbd814c6baemblemnur.png" t="Include" />
+              <e p="84c21cda-970e-4be5-9838-186c010dceb601b1e40c-7d28-4d02-a5fa-c2bbc48e8cafshortcodes.png" t="Include" />
+              <e p="8ee41f29-3295-4779-8947-7702755da8f5emblemnur.png" t="Include" />
+              <e p="95360807-dd8c-4f80-ac5d-64e08afe0915data-recovery.jpg" t="Include" />
+              <e p="a37fdc7e-6325-493b-9ac1-7874a1de600dc5f8d68b-d445-4956-bb45-53b869aca03637d598e5a04344da81c76621ba273915.jpg" t="Include" />
+              <e p="b713d9c0-e9fd-4e22-aae4-a60e20b0a582item-6.jpg" t="Include" />
+              <e p="b723ff71-0810-4aa4-9e0a-6450c9c0cfcdc5f8d68b-d445-4956-bb45-53b869aca03637d598e5a04344da81c76621ba273915.jpg" t="Include" />
               <e p="cable-organizer.jpg" t="Include" />
+              <e p="cc6f83e5-b7af-416c-854c-1be25b0a221femblemnur.png" t="Include" />
+              <e p="d2a7b1d1-678a-401e-8755-75f8ceed6dc8c5f8d68b-d445-4956-bb45-53b869aca03637d598e5a04344da81c76621ba273915.jpg" t="Include" />
+              <e p="e02e80ac-cfe5-41f0-bdcc-d4e809865051nursoft.png" t="Include" />
+              <e p="f6df378c-0ab0-4d57-a627-613571daec03emblemnur.png" t="Include" />
               <e p="hdd.jpg" t="Include" />
               <e p="laptop-ac-power-adapter.jpg" t="Include" />
               <e p="mouse.jpg" t="Include" />
@@ -1356,6 +1427,7 @@
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
               <e p="LICENSE.txt" t="Include" />
             </e>
+            <e p="notify.min.js" t="Include" />
           </e>
           <e p="owlcarousel2" t="Include">
             <e p="owl.carousel.min.js" t="Include" />

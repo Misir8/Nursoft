@@ -16,7 +16,7 @@
 <!-- Main content -->
 <section class="content">
 
-    <form  asp-action="Edit" asp-controller="About" method="post" enctype="multipart/form-data" >
+    <form asp-action="Edit" asp-controller="About" method="post" enctype="multipart/form-data">
         <!-- Default box -->
         <div class="box">
             <div asp-validation-summary="All"></div>
@@ -25,17 +25,17 @@
 
                     <div class="form-group">
                         <label asp-for="Photo"></label>
-                        <input type="file" class="form-control" asp-for="Photo" name="Photo" accept="image/gif, image/jpeg, image/jpeg, image/png"/>
+                        <input type="file" class="form-control" asp-for="Photo" name="Photo" accept="image/gif, image/jpeg, image/jpeg, image/png" />
                         <span asp-validation-for="Photo" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label>İndiki Şəkil</label>
-                        <img src="~/images/service/@Model.Image" alt="@Model.Image" width="100"/>
-                        <input type="hidden" name="Image" value="@Model.Image"/>
+                        <img src="~/images/service/@Model.Image" alt="@Model.Image" width="100" />
+                        <input type="hidden" name="Image" value="@Model.Image" />
                     </div>
                     <div class="form-group">
                         <label asp-for="Description"></label>
-                        <textarea  type="text" class="form-control" asp-for="Description" placeholder=""></textarea >
+                        <textarea type="text" class="form-control" asp-for="Description" placeholder=""></textarea>
                         <span asp-validation-for="Description"></span>
                     </div>
 
@@ -57,5 +57,12 @@
 
 @section script
 {
-    <partial name="_ValidationPartial"/>
+    <partial name="_ValidationPartial" />
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace('Description', {
+            language: "az"
+        });
+        </script>
 }

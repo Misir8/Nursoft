@@ -31,7 +31,7 @@
             {
                 <div class="md-col-6 text-center md-text-left">
                     <h2 class="text-upper text-semibold">ŞİRKƏT HAQQINDA</h2>
-                    <p>@about.Description</p>
+                    <p>@Html.Raw(about.Description)</p>
                 </div>
                 <div class="md-col-6 md-fix-container">
                     <img class="image" src="~/images/service/@about.Image" alt="@about.Image">
@@ -79,11 +79,13 @@
                 <i class="fas fa-bicycle" aria-hidden="true"></i>
             </div>
             <div class="contact-content">
-                <div class="contact-title">Request free consultation</div>
-                <div class="text-justify only-xs-text-justify-center">Get answers and advice from people you want it from.</div>
+                <div class="contact-title">
+                    Ödənişsiz konsultasiya sifariş et
+                </div>
+                <div class="text-justify only-xs-text-justify-center">İstənilən işçidən sualınıza cavab və məsləhətlər alın.</div>
             </div>
             <div class="contact-btn">
-                <a asp-controller="Contact" asp-action="Index" class="btn btns-white text-upper">Contact Us</a>
+                <a asp-controller="Contact" asp-action="Index" class="btn btns-white text-upper">BİZİMLƏ ƏLAQƏ</a>
             </div>
         </div>
     </div>

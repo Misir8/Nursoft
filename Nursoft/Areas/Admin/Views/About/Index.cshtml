@@ -45,7 +45,7 @@
                         <td>
                             <img class="image" src="~/images/service/@about.Image" alt="@about.Image" width="100">
                         </td>
-                        <td>@about.Description</td>
+                        <td>@Html.Raw(about.Description)</td>
                         <td>
                             <a asp-action="Edit" asp-controller="About" asp-route-id="@about.Id" class="fa fa-pencil"></a>
                         </td>

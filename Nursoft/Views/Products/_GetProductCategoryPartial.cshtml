@@ -14,15 +14,13 @@
                     <div class="item-title text-upper">
                         <a asp-action="ProductDetails" asp-controller="Products" asp-route-id="@product.Id" class="content-link">@product.Name</a>
                     </div>
-                    <div>
-                        @foreach (var category in Model.CategoryProducts)
-                                            {
-                                                if (category.Id == product.CategoryProductId)
-                                                {
-                                                    @category.Name
-                                                }
-                                            }
-                    </div>
+                    @foreach (var category in Model.CategoryProducts)
+                                                                {
+                                                                    if (category.Id == product.CategoryProductId)
+                                                                    {
+                                                                        @category.Name
+                                                                    }
+                                                                }
                 </div>
                 <div class="item-prices">
                     <div class="item-price">@product.Price.ToString("C2")</div>

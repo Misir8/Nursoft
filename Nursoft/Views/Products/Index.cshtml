@@ -5,19 +5,21 @@
 }
 
 
-@section styles{ 
+@section styles{
     <style>
         .pagination {
             display: flex;
             justify-content: center;
             align-items: center
         }
+
         .page-link {
             padding: 5px 10px;
             display: inline-block;
             border: 2px solid #29abe2;
             margin: 5px;
         }
+
         .active .page-link {
             background: #29abe2;
             color: #fff;
@@ -28,7 +30,6 @@
 
 
 <section class="with-bg solid-section">
-    <div class="fix-image-wrap" data-image-src="./images/service/tools.jpg" data-parallax="scroll"></div>
     <div class="theme-back"></div>
     <div class="container page-info">
     </div>
@@ -53,11 +54,11 @@
                 <div class="row">
                     <div class="sm-col-6 md-col-4">
                         <div class="field-group shop-line-field chosen-field">
-                            <label>sort by</label>
+                            <label>Sırala</label>
                             <div class="field-wrap">
                                 <select class="field-control" id="sortBy">
-                                    <option value="asc">Name Asc</option>
-                                    <option value="desc">Name Desc</option>
+                                    <option value="asc">A-dan Z-yə</option>
+                                    <option value="desc">Z-dən A-ya</option>
                                 </select>
                             </div>
                         </div>
@@ -76,7 +77,7 @@
     </div>
     <aside class="page-sidebar content-section">
         <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Product Category</h5>
+            <h5 class="shift-sm offs-md">Məhsul kateqoriyaları</h5>
             <ul class="categories-list text-medium solid-color">
                 @foreach (var category in Model.CategoryProducts)
                 {
@@ -85,16 +86,27 @@
                     </li>
                 }
             </ul>
+            <div class="field-wrap">
+                <select class="field-control" id="categories">
+                <option >Bütün kateqoriyalar</option>
+                    @foreach (var cat in Model.CategoryProducts)
+                    {
+                        <option value="@cat.Id">@cat.Name</option>
+                    }
+                </select>
+                <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+                <span class="input-group-state"><span class="positioned"><span class="text"><span class="valid-text"><i class="fas fa-check"></i></span> <span class="error-text"><i class="fas fa-times"></i></span> </span></span></span>
+                <span class="field-back"></span>
+            </div>
         </section>
-        <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
-       
+<div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+
     </aside>
 </div>
 <a href="#" class="scroll-top disabled"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
 <div class="loader-block">
     <div class="loader-back alt-bg"></div>
     <div class="loader-image">
-        <img class="image" src="images/parts/loader.gif" alt="">
     </div>
 </div>
 
@@ -104,6 +116,7 @@
         $(document).on("change", "#sortBy", function (e) {
 
             var sortUrl = $(this).val();
+            
             $.ajax({
                 url: "/Products/GetProduct/?query=" + sortUrl,
                 type: "get",
@@ -113,7 +126,32 @@
             });
         });
 
-        $(function () {
+        
+
+
+        const department = document.querySelector('#categories');
+        let filter = document.querySelector('.partial');
+        department.addEventListener('change', (e) => {
+            var depId = e.target.value;
+            console.log(department.firstElementChild.value, department.firstElementChild);
+            
+                $.ajax({
+                                    url: "/Products/CategoryProduct?depId=" + depId,
+                                    type: "POST",
+                                    success: function (r) {
+                                        if ( depId === "Bütün kateqoriyalar"){
+                                              window.location.href = ""     
+                                         }else{
+                                            document.querySelector(".partial").innerHTML = r;
+                                         }
+                                        
+                                    }
+                                });
+                               
+                        })
+            
+                
+         
             $(".addToCart").click(function (e) {
                 e.preventDefault();
                 let id = $(this).data("id");
@@ -122,7 +160,9 @@
                     number.textContent = data;
                     $.notify("Məhsul uğurla səbətə əlavə edildi!", "success");
                 });
-            })
-        });
+            });
+        
+        
+
     </script>
 }

@@ -58,13 +58,13 @@
                         <form class="out-lg">
                             <div class="row cols-md rows-md">
                                 <div class="sm-col-7">
-                                    <a class="btn text-upper col-12 addToCart" asp-action="Add" asp-controller="Cart" asp-route-id="@Model.Product.Id" data-id="@Model.Product.Id"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp; add to cart</a>
+                                    <a class="btn text-upper col-12 addToCart" asp-action="Add" asp-controller="Cart" asp-route-id="@Model.Product.Id" data-id="@Model.Product.Id"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp; Səbətə əlavə et</a>
                                 </div>
                             </div>
                         </form>
                         <div class="description-lines">
                             <div class="description-line">
-                                <span class="text-upper description-title">Categories:</span>
+                                <span class="text-upper description-title">Kateqoriya:</span>
                                 <span class="description-value colorful-text"><a asp-action="CategoryDetails" asp-route-id="@Model.CategoryProduct.Id">@Model.CategoryProduct.Name</a></span>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                 <div class="tabs-lined" data-action-role="tabs" data-inview-showup="showup-translate-up">
                     <ul class="tabs-head">
                         <li>
-                            <a href="#" data-tab="description">Description</a>
+                            <a href="#" data-tab="description">Təsvir</a>
                         </li>
                     </ul>
                     <div class="tabs-line">
@@ -82,7 +82,7 @@
                     <div class="tabs-content">
                         <div class="tab-content" data-tab-content="description">
                             <div class="content-text">
-                                <h6>Specification:</h6>
+                                <h6>Xüsusiyyətləri:</h6>
                                 <ul>
                                     @foreach (var spec in Model.Specifications)
                                     {
@@ -102,7 +102,7 @@
     </div>
     <aside class="page-sidebar content-section">
         <section class="side-content-section" data-inview-showup="showup-translate-up">
-            <h5 class="shift-sm offs-md">Product Category</h5>
+            <h5 class="shift-sm offs-md">Məhsul kateqoriyaları</h5>
             <ul class="categories-list text-medium solid-color">
                 @foreach (var category in Model.CategoryProducts)
                 {
@@ -116,10 +116,10 @@
         <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
         <section class="side-content-section" data-inview-showup="showup-translate-up">
             <div class="block-md muted-bg">
-                <h5 class="text-upper">Free consultation</h5>
-                <p>Get answers and advice from people you want it from.</p>
+                <h5 class="text-upper">ÖDƏNİŞSİZ KONSULTASİYA SİFARİŞ ET</h5>
+                <p>İstənilən işçidən sualınıza cavab və məsləhətlər alın.</p>
                 <div class="buttons-block text-right">
-                    <a class="btn btn-md text-upper" asp-controller="Contact" asp-action="Index">contact us</a>
+                    <a class="btn btn-md text-upper" asp-controller="Contact" asp-action="Index">BİZİMLƏ ƏLAQƏ</a>
                 </div>
             </div>
         </section>
