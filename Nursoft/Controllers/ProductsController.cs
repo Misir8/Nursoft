@@ -20,24 +20,56 @@ namespace Nursoft.Controllers
         }
 
         // GET
-        public IActionResult Index(int p = 1)
+        public async Task<IActionResult> Index(int? category, string name, int page = 1,
+            SortState sortOrder = SortState.NameAsc)
         {
-            int pageSize = 8;
-            
-            var vm = new ProductViewModel
+            int pageSize = 4;
+
+            //фильтрация
+            IQueryable<Product> products = _context.Products.Include(x => x.CategoryProduct);
+
+            if (category != null && category != 0)
             {
-                Products =  _context.Products.Skip((p-1)* pageSize).Take(pageSize),
-                CategoryProducts =  _context.CategoryProducts.ToList()
-            };
-            ViewBag.Page = p;
-            ViewBag.PageRange = pageSize;
-            ViewBag.TotalPages = (int) Math.Ceiling((decimal) _context.Products.Count() / pageSize);
-            if (p > ViewBag.TotalPages || p <= 0)
-            {
-                return NotFound();
+                products = products.Where(p => p.CategoryProductId == category);
             }
-            return View(vm);
-            
+            if (!String.IsNullOrEmpty(name))
+            {
+                products = products.Where(p => p.Name.Contains(name));
+            }
+
+            // сортировка
+            switch (sortOrder)
+            {
+                case SortState.NameDesc:
+                    products = products.OrderByDescending(s => s.Name);
+                    break;
+                case SortState.AgeAsc:
+                case SortState.CategoryAsc:
+                    products = products.OrderBy(s => s.CategoryProduct.Name);
+                    break;
+                case SortState.CategoryDesc:
+                    products = products.OrderByDescending(s => s.CategoryProduct.Name);
+                    break;
+                default:
+                    products = products.OrderBy(s => s.Name);
+                    break;
+            }
+
+            // пагинация
+            var count = await products.CountAsync();
+            var items = await products.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
+
+            // формируем модель представления
+            ProductAndCategoryViewModel viewModel = new ProductAndCategoryViewModel
+            {
+                PageViewModel = new PageViewModel(count, page, pageSize),
+                SortViewModel = new SortViewModel(sortOrder),
+                FilterViewModel = new FilterViewModel(_context.CategoryProducts.ToList(), category, name),
+                Products = items,
+                CategoryProducts = await _context.CategoryProducts.ToListAsync()
+            };
+            return View(viewModel);
+
         }
 
         public async Task<IActionResult> CategoryDetails(int? id)
@@ -83,45 +115,6 @@ namespace Nursoft.Controllers
         }
 
 
-        public async Task<IActionResult> GetProduct(string query)
-        {
-            switch (query)
-            {
-                case "asc":
-                    var vm = new ProductViewModel
-                    {
-                        Products = await _context.Products.OrderBy(p => p.Name).Take(6).ToListAsync(),
-                        CategoryProducts = await _context.CategoryProducts.ToListAsync()
-                    };
-                    return PartialView("_GetProductPartial", vm);
-                case "desc":
-                    var vmD = new ProductViewModel
-                    {
-                        Products = await _context.Products.OrderByDescending(p => p.Name).Take(6).ToListAsync(),
-                        CategoryProducts = await _context.CategoryProducts.ToListAsync()
-                    };
-                    return PartialView("_GetProductPartial", vmD);
-                default:
-                    var vmDD = new ProductViewModel
-                    {
-                        Products = await _context.Products.ToListAsync(),
-                        CategoryProducts = await _context.CategoryProducts.ToListAsync()
-                    };
-                    return PartialView("_GetProductPartial", vmDD);
-            }
-            
-        }
-        public async Task<IActionResult> CategoryProduct(int? depId )
-        {
-            if (depId == null)
-            {
-               return RedirectToAction("Index");
-            }
-
-            var ct = await _context.CategoryProducts.ToListAsync();
-            var cat = await _context.CategoryProducts.FirstOrDefaultAsync(x => x.Id == depId);
-            var products = await _context.Products.Where(x => x.CategoryProductId == cat.Id).ToListAsync();
-            return PartialView("_GetProductCategoryPartial", new ProductViewModel{CategoryProduct = cat, Products = products, CategoryProducts = ct});
-        }
+       
     }
 }

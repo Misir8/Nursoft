@@ -1,4 +1,4 @@
-﻿@model ProductViewModel
+﻿@model ProductAndCategoryViewModel
 @{
     Layout = "_Layout";
     ViewBag.Title = "Products";
@@ -23,6 +23,28 @@
         .active .page-link {
             background: #29abe2;
             color: #fff;
+        }
+        .sorting-product {
+            display: flex;
+            align-items: center;
+        }
+        .form-search {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #29abe2;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-filter {
+            background: #29abe2;
+            padding: 10px 20px;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-filter:hover{
+            background: #000;
         }
     </style>
 }
@@ -54,13 +76,19 @@
                 <div class="row">
                     <div class="sm-col-6 md-col-4">
                         <div class="field-group shop-line-field chosen-field">
-                            <label>Sırala</label>
-                            <div class="field-wrap">
-                                <select class="field-control" id="sortBy">
-                                    <option value="asc">A-dan Z-yə</option>
-                                    <option value="desc">Z-dən A-ya</option>
-                                </select>
+                            <div class="sorting-product">
+                                <label>Sırala</label>
+                                <a style="margin-left:5px;margin-right:5px;" class="btn btn-sm btn-primary" asp-action="Index"
+                                   asp-route-sortOrder="@(Model.SortViewModel.NameSort)"
+                                   asp-route-name="@(Model.FilterViewModel.SelectedName)"
+                                   asp-route-company="@(Model.FilterViewModel.SelectedCategory)">Məhsul</a>
+
+                                <a class="btn btn-sm btn-primary" asp-action="Index" asp-route-sortOrder="@(Model.SortViewModel.CategorySort)"
+                                   asp-route-name="@(Model.FilterViewModel.SelectedName)"
+                                   asp-route-company="@(Model.FilterViewModel.SelectedCategory)">Kateqoriya</a>
+                              
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -70,7 +98,10 @@
             </div>
             <div class="text-center shift-lg showup-translate-up" data-inview-showup="showup-translate-up">
                 <div class="pagination">
-                    <Pagination page-count="@ViewBag.TotalPages" page-target="/products/index" page-number="@ViewBag.Page" page-range="@ViewBag.PageRange"></Pagination>
+                    <page-link page-model="Model.PageViewModel" page-action="Index"
+                               page-url-name="@(Model.FilterViewModel.SelectedName)"
+                               page-url-company="@(Model.FilterViewModel.SelectedCategory)"
+                               page-url-sortorder="@(Model.SortViewModel.Current)"></page-link>
                 </div>
             </div>
         </section>
@@ -78,26 +109,17 @@
     <aside class="page-sidebar content-section">
         <section class="side-content-section" data-inview-showup="showup-translate-up">
             <h5 class="shift-sm offs-md">Məhsul kateqoriyaları</h5>
-            <ul class="categories-list text-medium solid-color">
-                @foreach (var category in Model.CategoryProducts)
-                {
-                    <li>
-                        <span class="category-line"><a class="content-link" asp-action="CategoryDetails" asp-route-id="@category.Id"><span class="single-line-text">@category.Name</span></a></span>
-                    </li>
-                }
-            </ul>
-            <div class="field-wrap">
-                <select class="field-control" id="categories">
-                <option >Bütün kateqoriyalar</option>
-                    @foreach (var cat in Model.CategoryProducts)
-                    {
-                        <option value="@cat.Id">@cat.Name</option>
-                    }
-                </select>
-                <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
-                <span class="input-group-state"><span class="positioned"><span class="text"><span class="valid-text"><i class="fas fa-check"></i></span> <span class="error-text"><i class="fas fa-times"></i></span> </span></span></span>
-                <span class="field-back"></span>
-            </div>
+            <form method="get">
+                <input name="name" value="@Model.FilterViewModel.SelectedName" class="form-search" />
+                <div class="field-wrap">
+                    <select name="category" asp-items="Model.FilterViewModel.Categories" class="field-control"></select>
+                    <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+                    <span class="input-group-state"><span class="positioned"><span class="text"><span class="valid-text"><i class="fas fa-check"></i></span> <span class="error-text"><i class="fas fa-times"></i></span> </span></span></span>
+                    <span class="field-back"></span>
+
+                </div>
+                <input type="submit" class="btn-filter" style="margin-top:10px;color: #fff;" value="Seç">
+            </form>
         </section>
 <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
 
@@ -125,32 +147,6 @@
                 }
             });
         });
-
-        
-
-
-        const department = document.querySelector('#categories');
-        let filter = document.querySelector('.partial');
-        department.addEventListener('change', (e) => {
-            var depId = e.target.value;
-            console.log(department.firstElementChild.value, department.firstElementChild);
-            
-                $.ajax({
-                                    url: "/Products/CategoryProduct?depId=" + depId,
-                                    type: "POST",
-                                    success: function (r) {
-                                        if ( depId === "Bütün kateqoriyalar"){
-                                              window.location.href = ""     
-                                         }else{
-                                            document.querySelector(".partial").innerHTML = r;
-                                         }
-                                        
-                                    }
-                                });
-                               
-                        })
-            
-                
          
             $(".addToCart").click(function (e) {
                 e.preventDefault();

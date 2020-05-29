@@ -441,4 +441,3 @@ C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Are
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Create.cshtml.g.cs
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Delete.cshtml.g.cs
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Edit.cshtml.g.cs
-C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Debug\netcoreapp3.1\Razor\Views\Products\_GetProductCategoryPartial.cshtml.g.cs

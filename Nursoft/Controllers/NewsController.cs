@@ -23,7 +23,7 @@ namespace Nursoft.Controllers
         {
             
 
-            int pageSize = 6;
+            int pageSize = 1;
             
             var news = _context.News.Skip((p - 1) * pageSize).Take(pageSize);
             ViewBag.Page = p;

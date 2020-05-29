@@ -1,9 +1,13 @@
-﻿using System.Text;
-using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Nursoft.Extensions
 {
-      public class PaginationTagHelper : TagHelper
+    public class PaginationTagHelper : TagHelper
     {
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
@@ -88,7 +92,7 @@ namespace Nursoft.Extensions
             }
 
             if (PageNumber != PageCount)
-            { 
+            {
                 content.Append($"<li class='page-item'><a class='page-link' href='{PageTarget}?p={PageCount}'>{PageLast}</a></li>");
             }
             content.Append(" </ul");
