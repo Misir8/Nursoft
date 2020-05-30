@@ -298,4 +298,9 @@ C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\A
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Roles\Index.cshtml.g.cs
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Roles\UserList.cshtml.g.cs
 C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
-C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Views\Cart\_PaypalParthial.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Counter\Edit.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Counter\Index.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Create.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Delete.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Edit.cshtml.g.cs
+C:\Users\User\Desktop\projects\Nursoft\Nursoft\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Testimonial\Index.cshtml.g.cs
